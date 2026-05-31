@@ -70,10 +70,10 @@ export default function ArticlePage() {
 
         
 
-        <main className="max-w-[1280px] mx-auto px-16 py-12">
+        <main className="mx-auto px-16 py-12">
 
           {/* ── ARTICLE HERO ── */}
-          <article className="relative mb-20">
+                    <article className="relative mb-20">
             <div className="grid grid-cols-1 md:grid-cols-12 gap-6">
               <div className="md:col-span-12 mb-8">
                 {/* Breadcrumb */}
@@ -117,6 +117,7 @@ export default function ArticlePage() {
               </div>
             </div>
           </article>
+
 
           {/* ── TWO COLUMN LAYOUT ── */}
           <div className="grid grid-cols-1 md:grid-cols-12 gap-16">
