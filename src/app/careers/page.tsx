@@ -41,25 +41,6 @@ export default function CareersPage() {
 
       <div className="bg-[#f8faf9] text-[#191c1c] min-h-screen">
 
-        {/* ── NAVBAR ── */}
-        <nav className="sticky top-0 w-full z-50 bg-white/70 backdrop-blur-xl border-b border-white/30 shadow-sm">
-          <div className="max-w-[1280px] mx-auto px-16 flex justify-between items-center h-20">
-            <div className="text-[24px] font-bold text-[#00261a] tracking-tight" style={{ fontFamily: "Sora,sans-serif" }}>
-              Harvestora Global
-            </div>
-            <div className="hidden md:flex gap-8 items-center">
-              {["Commodities", "Sustainability", "Global Network", "Supply Chain"].map((l) => (
-                <a key={l} href="#" className="text-[#414944] hover:text-[#00261a] transition-colors text-[16px]">{l}</a>
-              ))}
-              <a href="#" className="text-[#00261a] border-b-2 border-[#775a19] font-bold pb-1 text-[16px]">Career Portal</a>
-            </div>
-            <div className="flex items-center gap-4">
-              <button className="px-6 py-2 bg-[#00261a] text-white text-[14px] font-semibold tracking-[0.05em] rounded-full bezier-transition border-b-2 border-[#775a19] hover:scale-105">
-                Request Quote
-              </button>
-            </div>
-          </div>
-        </nav>
 
         {/* ── HERO ── */}
         <header className="relative w-full h-[819px] flex items-center overflow-hidden bg-[#0f3d2e]">
@@ -313,49 +294,7 @@ export default function CareersPage() {
           </div>
         </section>
 
-        {/* ── FOOTER ── */}
-        <footer className="bg-[#00261a] text-white w-full pt-16 pb-8 border-t border-[#c0c8c3]">
-          <div className="max-w-[1280px] mx-auto px-16 grid grid-cols-1 md:grid-cols-4 gap-6">
-            <div>
-              <div className="text-[24px] font-bold text-[#775a19] mb-6" style={{ fontFamily: "Sora,sans-serif" }}>Harvestora</div>
-              <p className="text-white/70 text-[16px] leading-[1.6] mb-6">Pioneering the future of industrial organic trade across six continents.</p>
-              <div className="flex gap-4">
-                {["public", "mail", "hub"].map((icon) => (
-                  <span key={icon} className="material-symbols-outlined text-white/70 cursor-pointer hover:text-[#ffdea5]">{icon}</span>
-                ))}
-              </div>
-            </div>
-            <div>
-              <h5 className="text-white text-[14px] font-semibold tracking-[0.05em] mb-6">Corporate</h5>
-              <ul className="space-y-4">
-                {["Global Offices", "Quality Assurance", "Trade Compliance"].map((l) => (
-                  <li key={l}><a href="#" className="text-white/70 hover:text-[#ffdea5] transition-colors text-[16px]">{l}</a></li>
-                ))}
-              </ul>
-            </div>
-            <div>
-              <h5 className="text-white text-[14px] font-semibold tracking-[0.05em] mb-6">Resources</h5>
-              <ul className="space-y-4">
-                <li><a href="#" className="text-white/70 hover:text-[#ffdea5] transition-colors text-[16px]">Sustainability Report</a></li>
-                <li><a href="#" className="text-[#ffdea5] font-bold text-[16px]">Career Portal</a></li>
-                <li><a href="#" className="text-white/70 hover:text-[#ffdea5] transition-colors text-[16px]">Privacy Policy</a></li>
-              </ul>
-            </div>
-            <div>
-              <h5 className="text-white text-[14px] font-semibold tracking-[0.05em] mb-6">Newsletter</h5>
-              <p className="text-white/70 text-[16px] leading-[1.6] mb-4">Market insights delivered weekly.</p>
-              <div className="flex">
-                <input type="email" placeholder="Email" className="bg-[#0f3d2e] border-none text-white px-4 py-2 rounded-l-[4px] w-full outline-none text-[16px] placeholder:text-white/40" />
-                <button className="bg-[#ffdea5] text-[#261900] px-4 py-2 rounded-r-[4px]">
-                  <span className="material-symbols-outlined">arrow_forward</span>
-                </button>
-              </div>
-            </div>
-          </div>
-          <div className="max-w-[1280px] mx-auto px-16 mt-16 pt-8 border-t border-white/10 text-center">
-            <p className="text-white/50 text-sm">© 2024 Harvestora Global Enterprise. All rights reserved. Industrial Organic Precision.</p>
-          </div>
-        </footer>
+       
 
       </div>
     </>

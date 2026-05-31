@@ -60,26 +60,7 @@ export default function InsightsPage() {
       `}</style>
 
       <div className="bg-[#f8faf9] text-[#191c1c] min-h-screen">
-
-        {/* ── NAVBAR ── */}
-        <header className="sticky top-0 w-full z-50 bg-white/70 backdrop-blur-xl border-b border-white/30 shadow-sm">
-          <div className="max-w-[1280px] mx-auto px-16 flex justify-between items-center h-20">
-            <div className="text-[24px] font-bold text-[#00261a] tracking-tight" style={{ fontFamily: "Sora,sans-serif" }}>
-              Harvestora Global
-            </div>
-            <nav className="hidden md:flex gap-8">
-              {["Commodities", "Sustainability", "Global Network", "Supply Chain", "Certifications"].map((l) => (
-                <a key={l} href="#" className="text-[#414944] hover:text-[#00261a] transition-colors text-[16px]">{l}</a>
-              ))}
-            </nav>
-            <div className="flex items-center gap-4">
-              <button className="px-6 py-2 text-[14px] font-semibold tracking-[0.05em] bg-[#00261a] text-white border-b-2 border-[#775a19] hover:bg-[#00261a]/90 transition-all">
-                Request Quote
-              </button>
-            </div>
-          </div>
-        </header>
-
+ 
         <main className="max-w-[1280px] mx-auto px-16 py-12">
 
           {/* ── HERO ── */}
@@ -221,55 +202,7 @@ export default function InsightsPage() {
 
         </main>
 
-        {/* ── FOOTER ── */}
-        <footer className="bg-[#00261a] text-white w-full pt-16 pb-8 border-t border-[#c0c8c3]">
-          <div className="max-w-[1280px] mx-auto px-16 grid grid-cols-1 md:grid-cols-4 gap-6 mb-12">
-            <div>
-              <div className="text-[24px] font-bold text-[#775a19] mb-6" style={{ fontFamily: "Sora,sans-serif" }}>
-                Harvestora Global
-              </div>
-              <p className="text-[16px] leading-[1.6] text-white/70 mb-6">
-                Pioneering the future of organic exports through industrial precision and ancestral wisdom.
-              </p>
-            </div>
-            <div>
-              <h4 className="text-white text-[14px] font-semibold tracking-widest uppercase mb-6">Resources</h4>
-              <ul className="flex flex-col gap-4">
-                {["Global Offices", "Quality Assurance", "Trade Compliance"].map((l) => (
-                  <li key={l}><a href="#" className="text-white/70 hover:text-[#ffdea5] transition-colors text-[16px]">{l}</a></li>
-                ))}
-              </ul>
-            </div>
-            <div>
-              <h4 className="text-white text-[14px] font-semibold tracking-widest uppercase mb-6">Corporate</h4>
-              <ul className="flex flex-col gap-4">
-                {["Privacy Policy", "Sustainability Report", "Career Portal"].map((l) => (
-                  <li key={l}><a href="#" className="text-white/70 hover:text-[#ffdea5] transition-colors text-[16px]">{l}</a></li>
-                ))}
-              </ul>
-            </div>
-            <div>
-              <h4 className="text-white text-[14px] font-semibold tracking-widest uppercase mb-6">Connect</h4>
-              <div className="flex gap-4">
-                {["language", "hub"].map((icon) => (
-                  <a key={icon} href="#" className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-[#775a19] transition-colors">
-                    <span className="material-symbols-outlined" style={{ fontSize: 20 }}>{icon}</span>
-                  </a>
-                ))}
-              </div>
-            </div>
-          </div>
-          <div className="max-w-[1280px] mx-auto px-16 pt-8 border-t border-white/10 flex flex-col md:flex-row justify-between items-center gap-4">
-            <p className="text-white/50 text-[16px] text-center md:text-left">
-              © 2024 Harvestora Global Enterprise. All rights reserved. Industrial Organic Precision.
-            </p>
-            <div className="flex gap-8">
-              {["Terms of Service", "Cookies Policy"].map((l) => (
-                <a key={l} href="#" className="text-[14px] font-semibold tracking-[0.05em] text-white/50 hover:text-white transition-colors">{l}</a>
-              ))}
-            </div>
-          </div>
-        </footer>
+         
 
       </div>
     </>

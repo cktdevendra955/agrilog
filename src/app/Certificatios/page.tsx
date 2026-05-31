@@ -70,25 +70,7 @@ export default function CertificationsPage() {
       <div className="bg-[#f8faf9] text-[#191c1c] min-h-screen">
 
         {/* ── NAVBAR ── */}
-        <nav className="sticky top-0 w-full z-50 bg-white/70 backdrop-blur-xl border-b border-white/30 shadow-sm">
-          <div className="max-w-[1280px] mx-auto px-16 flex justify-between items-center h-20">
-            <span className="text-[24px] font-bold text-[#00261a] tracking-tight" style={{ fontFamily: "Sora, sans-serif" }}>
-              Harvestora Global
-            </span>
-            <div className="hidden md:flex gap-8">
-              <a href="#" className="text-[#414944] hover:text-[#00261a] transition-colors text-[16px]">Commodities</a>
-              <a href="#" className="text-[#414944] hover:text-[#00261a] transition-colors text-[16px]">Sustainability</a>
-              <a href="#" className="text-[#414944] hover:text-[#00261a] transition-colors text-[16px]">Global Network</a>
-              <a href="#" className="text-[#414944] hover:text-[#00261a] transition-colors text-[16px]">Supply Chain</a>
-              <a href="#" className="text-[#00261a] border-b-2 border-[#775a19] font-bold pb-1 text-[16px]">Certifications</a>
-            </div>
-            <div className="flex items-center gap-4">
-              <button className="px-6 py-2 bg-[#00261a] text-white text-[14px] font-semibold tracking-[0.05em] rounded-[4px] hover:-translate-y-0.5 transition-transform">
-                Request Quote
-              </button>
-            </div>
-          </div>
-        </nav>
+       
 
         {/* ── HERO ── */}
         <header className="relative h-[716px] flex items-center overflow-hidden">
@@ -241,46 +223,7 @@ export default function CertificationsPage() {
           </div>
         </section>
 
-        {/* ── FOOTER ── */}
-        <footer className="bg-[#00261a] text-white w-full pt-16 pb-8 border-t border-[#c0c8c3]">
-          <div className="max-w-[1280px] mx-auto px-16 grid grid-cols-1 md:grid-cols-4 gap-6">
-            <div>
-              <span className="text-[24px] font-bold text-[#775a19] mb-6 block" style={{ fontFamily: "Sora, sans-serif" }}>
-                Harvestora Global
-              </span>
-              <p className="text-[16px] leading-[1.6] text-white/70 mb-6">Industrial Organic Precision in Global Export.</p>
-            </div>
-            <div>
-              <h4 className="text-[14px] font-semibold tracking-[0.05em] text-white uppercase mb-6">Trade Links</h4>
-              <ul className="space-y-4">
-                <li><a href="#" className="text-white/70 hover:text-[#ffdea5] transition-colors hover:translate-x-1 inline-block text-[16px]">Global Offices</a></li>
-                <li><a href="#" className="text-[#ffdea5] font-bold hover:translate-x-1 inline-block text-[16px]">Quality Assurance</a></li>
-                <li><a href="#" className="text-white/70 hover:text-[#ffdea5] transition-colors hover:translate-x-1 inline-block text-[16px]">Trade Compliance</a></li>
-              </ul>
-            </div>
-            <div>
-              <h4 className="text-[14px] font-semibold tracking-[0.05em] text-white uppercase mb-6">Resources</h4>
-              <ul className="space-y-4">
-                {["Sustainability Report", "Privacy Policy", "Career Portal"].map((l) => (
-                  <li key={l}><a href="#" className="text-white/70 hover:text-[#ffdea5] transition-colors hover:translate-x-1 inline-block text-[16px]">{l}</a></li>
-                ))}
-              </ul>
-            </div>
-            <div>
-              <h4 className="text-[14px] font-semibold tracking-[0.05em] text-white uppercase mb-6">Headquarters</h4>
-              <p className="text-[16px] leading-[1.6] text-white/70">
-                Industrial Hub East, Floor 22<br />
-                Singapore 018981<br />
-                contact@harvestora.global
-              </p>
-            </div>
-          </div>
-          <div className="max-w-[1280px] mx-auto px-16 mt-16 pt-8 border-t border-white/10">
-            <p className="text-[16px] leading-[1.6] text-white/50 text-center">
-              © 2024 Harvestora Global Enterprise. All rights reserved. Industrial Organic Precision.
-            </p>
-          </div>
-        </footer>
+       
 
       </div>
     </>

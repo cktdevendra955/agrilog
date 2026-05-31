@@ -95,27 +95,7 @@ export default function GalleryPage() {
 
       <div className="bg-[#f8faf9] text-[#191c1c] min-h-screen overflow-x-hidden">
 
-        {/* ── NAVBAR ── */}
-        <nav className="sticky top-0 w-full z-50 bg-white/70 backdrop-blur-xl border-b border-white/30 shadow-sm h-20">
-          <div className="max-w-[1280px] mx-auto px-16 flex justify-between items-center h-full">
-            <div className="text-[24px] font-bold text-[#00261a] tracking-tight" style={{ fontFamily: "Sora,sans-serif" }}>
-              Harvestora Global
-            </div>
-            <div className="hidden md:flex gap-8 items-center">
-              {["Commodities", "Sustainability", "Global Network", "Supply Chain", "Certifications"].map((l) => (
-                <a key={l} href="#" className="text-[#414944] hover:text-[#00261a] transition-colors text-[16px]">{l}</a>
-              ))}
-            </div>
-            <div className="flex items-center gap-4">
-              <button className="px-6 py-2 border border-[#717974] text-[#00261a] text-[14px] font-semibold tracking-[0.05em] hover:bg-[#00261a]/5 transition-all duration-300">
-                Investor Relations
-              </button>
-              <button className="px-6 py-2 bg-[#00261a] text-white text-[14px] font-semibold tracking-[0.05em] border-b-2 border-[#775a19] hover:-translate-y-0.5 transition-all duration-300">
-                Request Quote
-              </button>
-            </div>
-          </div>
-        </nav>
+         
 
         <main>
 
@@ -294,57 +274,7 @@ export default function GalleryPage() {
           </section>
 
         </main>
-
-        {/* ── FOOTER ── */}
-        <footer className="w-full pt-16 pb-8 bg-[#00261a] border-t border-[#c0c8c3]">
-          <div className="max-w-[1280px] mx-auto px-16">
-            <div className="grid grid-cols-1 md:grid-cols-4 gap-6 mb-16">
-              <div>
-                <div className="text-[24px] font-bold text-[#775a19] mb-6" style={{ fontFamily: "Sora,sans-serif" }}>
-                  Harvestora Global
-                </div>
-                <p className="text-white/70 text-[16px] leading-[1.6] pr-8">
-                  Pioneering the intersection of organic vitality and industrial precision on a global scale.
-                </p>
-              </div>
-              {[
-                { heading: "Navigation", links: ["Global Offices", "Quality Assurance", "Trade Compliance"] },
-                { heading: "Resources", links: ["Sustainability Report", "Career Portal", "Privacy Policy"] },
-              ].map(({ heading, links }) => (
-                <div key={heading}>
-                  <h5 className="text-white text-[14px] font-semibold tracking-[0.05em] mb-6">{heading}</h5>
-                  <ul className="space-y-4">
-                    {links.map((l) => (
-                      <li key={l}><a href="#" className="text-white/70 hover:text-[#ffdea5] transition-colors hover:translate-x-1 inline-block text-[16px]">{l}</a></li>
-                    ))}
-                  </ul>
-                </div>
-              ))}
-              <div>
-                <h5 className="text-white text-[14px] font-semibold tracking-[0.05em] mb-6">Connect</h5>
-                <div className="flex gap-4 mb-6">
-                  {["public", "mail", "share"].map((icon) => (
-                    <a key={icon} href="#" className="w-10 h-10 glass-card bg-white/10 flex items-center justify-center text-white hover:bg-[#775a19] transition-colors">
-                      <span className="material-symbols-outlined" style={{ fontSize: 18 }}>{icon}</span>
-                    </a>
-                  ))}
-                </div>
-                <div className="text-white/70 text-[16px] leading-[1.6]">
-                  HQ: Zürich, Switzerland<br />contact@harvestora.global
-                </div>
-              </div>
-            </div>
-            <div className="border-t border-white/10 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
-              <p className="text-white/50 text-[14px] font-semibold tracking-[0.05em]">
-                © 2024 Harvestora Global Enterprise. All rights reserved. Industrial Organic Precision.
-              </p>
-              <div className="flex gap-6">
-                <span className="text-white/50 text-[14px] font-semibold tracking-[0.05em]">ISO 9001 CERTIFIED</span>
-                <span className="text-white/50 text-[14px] font-semibold tracking-[0.05em]">ECOCERT ORGANIC</span>
-              </div>
-            </div>
-          </div>
-        </footer>
+ 
 
       </div>
     </>

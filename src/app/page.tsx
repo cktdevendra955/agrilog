@@ -24,31 +24,6 @@ export default function HarvestoraHome() {
       `}</style>
 
       <div className="bg-[#f8faf9] text-[#191c1c]">
-
-        {/* ── NAVBAR ── */}
-        <nav className="sticky top-0 w-full z-50 bg-white/70 backdrop-blur-xl border-b border-white/30 shadow-sm">
-          <div className="max-w-[1280px] mx-auto px-16 flex justify-between items-center h-20">
-            <div className="text-[24px] leading-[1.3] font-bold text-[#00261a] tracking-tight" style={{ fontFamily: 'Sora, sans-serif' }}>
-              Harvestora Global
-            </div>
-            <div className="hidden md:flex gap-8 items-center">
-              <a href="#" className="text-[#00261a] border-b-2 border-[#775a19] font-bold pb-1 text-[16px]">Commodities</a>
-              <a href="#" className="text-[#414944] hover:text-[#00261a] transition-colors text-[16px]">Sustainability</a>
-              <a href="#" className="text-[#414944] hover:text-[#00261a] transition-colors text-[16px]">Global Network</a>
-              <a href="#" className="text-[#414944] hover:text-[#00261a] transition-colors text-[16px]">Supply Chain</a>
-              <a href="#" className="text-[#414944] hover:text-[#00261a] transition-colors text-[16px]">Certifications</a>
-            </div>
-            <div className="flex items-center gap-4">
-              <button className="px-6 py-2 border border-[#00261a] text-[#00261a] text-[14px] font-semibold tracking-[0.05em] hover:bg-[#00261a]/5 transition-all">
-                Investor Relations
-              </button>
-              <button className="px-6 py-2 bg-[#00261a] text-white text-[14px] font-semibold tracking-[0.05em] border-b-2 border-[#ffdea5] hover:shadow-lg hover:-translate-y-0.5 transition-all">
-                Request Quote
-              </button>
-            </div>
-          </div>
-        </nav>
-
         {/* ── HERO ── */}
         <header className="relative min-h-[921px] flex items-center overflow-hidden">
           <div className="absolute inset-0 z-0">
@@ -316,53 +291,7 @@ export default function HarvestoraHome() {
         </section>
 
         {/* ── FOOTER ── */}
-        <footer className="bg-[#00261a] text-white w-full pt-16 pb-8 border-t border-[#c0c8c3]">
-          <div className="max-w-[1280px] mx-auto px-16 grid grid-cols-1 md:grid-cols-4 gap-6">
-            <div className="space-y-6">
-              <div className="text-[24px] font-bold text-[#775a19]" style={{ fontFamily: 'Sora, sans-serif' }}>Harvestora Global</div>
-              <p className="text-white/70 text-[16px] leading-[1.6]">
-                Redefining organic agriculture through industrial-scale precision and ethical global trade.
-              </p>
-            </div>
-            <div className="space-y-4">
-              <h4 className="text-[#ffdea5] font-bold text-[14px] tracking-[0.05em]">Company</h4>
-              <nav className="flex flex-col gap-2">
-                {["Global Offices", "Career Portal", "Sustainability Report"].map((item) => (
-                  <a key={item} href="#" className="text-white/70 hover:text-[#ffdea5] transition-colors text-[16px] hover:translate-x-1 inline-block transition-transform">
-                    {item}
-                  </a>
-                ))}
-              </nav>
-            </div>
-            <div className="space-y-4">
-              <h4 className="text-[#ffdea5] font-bold text-[14px] tracking-[0.05em]">Operations</h4>
-              <nav className="flex flex-col gap-2">
-                {["Quality Assurance", "Trade Compliance", "Privacy Policy"].map((item) => (
-                  <a key={item} href="#" className="text-white/70 hover:text-[#ffdea5] transition-colors text-[16px] hover:translate-x-1 inline-block transition-transform">
-                    {item}
-                  </a>
-                ))}
-              </nav>
-            </div>
-            <div className="space-y-4">
-              <h4 className="text-[#ffdea5] font-bold text-[14px] tracking-[0.05em]">Contact</h4>
-              <p className="text-white/70 text-[16px] leading-[1.6]">
-                12th Floor, Trade Tower<br />Mumbai, MH 400051<br />India
-              </p>
-              <p className="text-white/70 text-[16px] leading-[1.6]">
-                info@harvestora.com<br />+91 22 4567 8900
-              </p>
-            </div>
-          </div>
-          <div className="max-w-[1280px] mx-auto px-16 mt-16 pt-8 border-t border-[#c0c8c3]/30 flex flex-col md:flex-row justify-between items-center text-white/50 text-xs">
-            <p>© 2024 Harvestora Global Enterprise. All rights reserved. Industrial Organic Precision.</p>
-            <div className="flex gap-6 mt-4 md:mt-0">
-              {["LinkedIn", "Twitter", "Instagram"].map((s) => (
-                <a key={s} href="#" className="hover:text-[#ffdea5]">{s}</a>
-              ))}
-            </div>
-          </div>
-        </footer>
+       
 
       </div>
     </>

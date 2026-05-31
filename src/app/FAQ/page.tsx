@@ -102,27 +102,7 @@ export default function FaqPage() {
 
       <div className="bg-[#f8faf9] text-[#191c1c] min-h-screen">
 
-        {/* ── NAVBAR ── */}
-        <header className="sticky top-0 w-full z-50 bg-white/70 backdrop-blur-xl border-b border-white/30 shadow-sm">
-          <nav className="max-w-[1280px] mx-auto px-5 md:px-16 flex justify-between items-center h-20">
-            <div className="text-[24px] font-bold text-[#00261a] tracking-tight" style={{ fontFamily: "Sora,sans-serif" }}>
-              Harvestora Global
-            </div>
-            <div className="hidden md:flex items-center gap-8">
-              {["Commodities", "Sustainability", "Global Network", "Supply Chain", "Certifications"].map((l) => (
-                <a key={l} href="#" className="text-[#414944] hover:text-[#00261a] transition-colors text-[16px]">{l}</a>
-              ))}
-            </div>
-            <div className="flex items-center gap-4">
-              <button className="hidden lg:block text-[#414944] text-[14px] font-semibold tracking-[0.05em] px-4 py-2 hover:bg-[#00261a]/5 transition-all">
-                Investor Relations
-              </button>
-              <button className="bg-[#00261a] text-white px-6 py-3 text-[14px] font-semibold tracking-[0.05em] border-b-2 border-[#775a19] hover:-translate-y-0.5 transition-all">
-                Request Quote
-              </button>
-            </div>
-          </nav>
-        </header>
+        
 
         <main>
 
@@ -256,52 +236,7 @@ export default function FaqPage() {
           </section>
 
         </main>
-
-        {/* ── FOOTER ── */}
-        <footer className="bg-[#00261a] pt-16 pb-8 w-full border-t border-[#c0c8c3]">
-          <div className="max-w-[1280px] mx-auto px-5 md:px-16 grid grid-cols-1 md:grid-cols-4 gap-6 mb-16">
-            <div className="space-y-6">
-              <div className="text-[24px] font-bold text-[#775a19]" style={{ fontFamily: "Sora,sans-serif" }}>Harvestora Global</div>
-              <p className="text-white/70 text-[16px] leading-[1.6] pr-8">
-                Advancing global food security through organic precision and industrial-scale logistics.
-              </p>
-            </div>
-            <div className="space-y-4">
-              <h5 className="text-white text-[14px] font-semibold tracking-[0.05em]">Operations</h5>
-              <ul className="space-y-2">
-                {["Global Offices", "Quality Assurance", "Trade Compliance"].map((l) => (
-                  <li key={l}><a href="#" className="text-white/70 hover:text-[#ffdea5] transition-colors text-[16px] hover:translate-x-1 inline-block">{l}</a></li>
-                ))}
-              </ul>
-            </div>
-            <div className="space-y-4">
-              <h5 className="text-white text-[14px] font-semibold tracking-[0.05em]">Resources</h5>
-              <ul className="space-y-2">
-                {["Sustainability Report", "Career Portal", "Certifications"].map((l) => (
-                  <li key={l}><a href="#" className="text-white/70 hover:text-[#ffdea5] transition-colors text-[16px] hover:translate-x-1 inline-block">{l}</a></li>
-                ))}
-              </ul>
-            </div>
-            <div className="space-y-4">
-              <h5 className="text-white text-[14px] font-semibold tracking-[0.05em]">Network Status</h5>
-              <div className="flex items-center gap-3 p-4 bg-white/5 border border-white/10">
-                <span className="flex h-3 w-3 rounded-full bg-[#ffdea5]" />
-                <span className="text-white text-[16px] leading-[1.6]">Systems Operational</span>
-              </div>
-              <p className="text-white/50 text-xs">Updated: Nov 2024, 08:00 UTC</p>
-            </div>
-          </div>
-          <div className="max-w-[1280px] mx-auto px-5 md:px-16 pt-8 border-t border-white/10 flex flex-col md:flex-row justify-between gap-4">
-            <p className="text-white/70 text-[16px] leading-[1.6]">
-              © 2024 Harvestora Global Enterprise. All rights reserved. Industrial Organic Precision.
-            </p>
-            <div className="flex gap-6">
-              {["Privacy Policy", "Terms of Service"].map((l) => (
-                <a key={l} href="#" className="text-white/70 hover:text-[#ffdea5] transition-colors text-[16px]">{l}</a>
-              ))}
-            </div>
-          </div>
-        </footer>
+                
 
       </div>
     </>

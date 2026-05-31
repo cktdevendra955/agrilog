@@ -42,26 +42,7 @@ export default function SustainabilityPage() {
 
       <div className="bg-[#f8faf9] text-[#191c1c] min-h-screen overflow-x-hidden">
 
-        {/* ── NAVBAR ── */}
-        <nav className="sticky top-0 w-full z-50 bg-white/70 backdrop-blur-xl border-b border-white/30 shadow-sm">
-          <div className="max-w-[1280px] mx-auto px-16 flex justify-between items-center h-20">
-            <div className="text-[24px] font-bold text-[#00261a] tracking-tight" style={{ fontFamily: "Sora,sans-serif" }}>
-              Harvestora Global
-            </div>
-            <div className="hidden md:flex items-center gap-8">
-              <a href="#" className="text-[#414944] hover:text-[#00261a] transition-colors text-[16px]">Commodities</a>
-              <a href="#" className="text-[#00261a] border-b-2 border-[#775a19] font-bold pb-1 text-[16px]">Sustainability</a>
-              <a href="#" className="text-[#414944] hover:text-[#00261a] transition-colors text-[16px]">Global Network</a>
-              <a href="#" className="text-[#414944] hover:text-[#00261a] transition-colors text-[16px]">Supply Chain</a>
-              <a href="#" className="text-[#414944] hover:text-[#00261a] transition-colors text-[16px]">Certifications</a>
-            </div>
-            <div className="flex items-center gap-4">
-              <button className="px-6 py-2.5 bg-[#00261a] text-white text-[14px] font-semibold tracking-[0.05em] rounded-full hover:shadow-lg hover:-translate-y-0.5 transition-all border-b-2 border-[#775a19]">
-                Request Quote
-              </button>
-            </div>
-          </div>
-        </nav>
+        
 
         <main>
 
@@ -266,63 +247,7 @@ export default function SustainabilityPage() {
           </section>
 
         </main>
-
-        {/* ── FOOTER ── */}
-        <footer className="w-full pt-16 pb-8 bg-[#00261a] text-white border-t border-[#c0c8c3]">
-          <div className="max-w-[1280px] mx-auto px-16 grid grid-cols-1 md:grid-cols-4 gap-6">
-            <div>
-              <div className="text-[24px] font-bold text-[#775a19] mb-6" style={{ fontFamily: "Sora,sans-serif" }}>
-                Harvestora Global
-              </div>
-              <p className="text-white/70 text-[16px] leading-[1.6] pr-8">
-                Defining the next era of industrial organic agriculture through transparency and precision.
-              </p>
-            </div>
-            <div>
-              <h4 className="text-white text-[14px] font-semibold tracking-wider uppercase mb-6">Services</h4>
-              <ul className="space-y-4">
-                {["Global Offices", "Quality Assurance", "Trade Compliance"].map((l) => (
-                  <li key={l}><a href="#" className="text-white/70 hover:text-[#ffdea5] transition-colors hover:translate-x-1 inline-block text-[16px]">{l}</a></li>
-                ))}
-              </ul>
-            </div>
-            <div>
-              <h4 className="text-white text-[14px] font-semibold tracking-wider uppercase mb-6">Reports</h4>
-              <ul className="space-y-4">
-                <li><a href="#" className="text-[#ffdea5] font-bold text-[16px]">Sustainability Report</a></li>
-                {["Privacy Policy", "Career Portal"].map((l) => (
-                  <li key={l}><a href="#" className="text-white/70 hover:text-[#ffdea5] transition-colors hover:translate-x-1 inline-block text-[16px]">{l}</a></li>
-                ))}
-              </ul>
-            </div>
-            <div>
-              <h4 className="text-white text-[14px] font-semibold tracking-wider uppercase mb-6">Newsletter</h4>
-              <div className="flex flex-col gap-4">
-                <p className="text-white/70 text-sm">Join our network for monthly sustainability insights.</p>
-                <div className="relative">
-                  <input
-                    type="email"
-                    placeholder="Email address"
-                    className="w-full bg-white/5 border border-white/20 rounded-[4px] px-4 py-3 text-white focus:ring-2 focus:ring-[#ffdea5] outline-none text-[16px]"
-                  />
-                  <button className="absolute right-2 top-2 p-1.5 bg-[#ffdea5] text-[#261900] rounded-sm">
-                    <span className="material-symbols-outlined" style={{ fontSize: 18 }}>arrow_forward</span>
-                  </button>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div className="max-w-[1280px] mx-auto px-16 mt-16 pt-8 border-t border-white/10 flex flex-col md:flex-row justify-between items-center gap-4">
-            <p className="text-white/50 text-[14px] font-semibold tracking-[0.05em]">
-              © 2024 Harvestora Global Enterprise. All rights reserved. Industrial Organic Precision.
-            </p>
-            <div className="flex gap-6">
-              {["language", "share"].map((icon) => (
-                <span key={icon} className="material-symbols-outlined text-white/50 hover:text-[#ffdea5] cursor-pointer transition-colors">{icon}</span>
-              ))}
-            </div>
-          </div>
-        </footer>
+ 
 
       </div>
     </>

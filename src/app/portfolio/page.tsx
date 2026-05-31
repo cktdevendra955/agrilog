@@ -95,30 +95,7 @@ export default function CommoditiesPage() {
       <div className="bg-[#f8faf9] text-[#191c1c] min-h-screen">
 
         {/* ── NAVBAR ── */}
-        <nav className="sticky top-0 w-full z-50 bg-white/70 backdrop-blur-xl border-b border-white/30 shadow-sm h-20">
-          <div className="max-w-[1280px] mx-auto px-16 flex justify-between items-center h-full">
-            <div className="flex items-center gap-6">
-              <span className="text-[24px] leading-[1.3] font-bold text-[#00261a] tracking-tight" style={{ fontFamily: "Sora, sans-serif" }}>
-                Harvestora Global
-              </span>
-              <div className="hidden md:flex items-center gap-6">
-                <a href="#" className="text-[#00261a] border-b-2 border-[#775a19] font-bold pb-1 text-[16px]">Commodities</a>
-                <a href="#" className="text-[#414944] hover:text-[#00261a] transition-colors text-[16px]">Sustainability</a>
-                <a href="#" className="text-[#414944] hover:text-[#00261a] transition-colors text-[16px]">Global Network</a>
-                <a href="#" className="text-[#414944] hover:text-[#00261a] transition-colors text-[16px]">Supply Chain</a>
-                <a href="#" className="text-[#414944] hover:text-[#00261a] transition-colors text-[16px]">Certifications</a>
-              </div>
-            </div>
-            <div className="flex items-center gap-4">
-              <button className="hidden lg:block text-[#414944] text-[14px] font-semibold px-4 py-2 hover:bg-[#00261a]/5 transition-all">
-                Investor Relations
-              </button>
-              <button className="bg-[#00261a] text-white px-6 py-3 text-[14px] font-semibold tracking-[0.05em] hover:border-b-2 hover:border-[#ffdea5] transition-all duration-300">
-                Request Quote
-              </button>
-            </div>
-          </div>
-        </nav>
+         
 
         <main className="max-w-[1280px] mx-auto px-16 py-16">
 
@@ -236,63 +213,7 @@ export default function CommoditiesPage() {
 
         </main>
 
-        {/* ── FOOTER ── */}
-        <footer className="w-full pt-16 pb-8 bg-[#00261a] text-white border-t border-[#c0c8c3]">
-          <div className="max-w-[1280px] mx-auto px-16 grid grid-cols-1 md:grid-cols-4 gap-6">
-            <div className="md:col-span-1">
-              <span className="text-[24px] font-bold text-[#775a19] mb-4 block" style={{ fontFamily: "Sora, sans-serif" }}>
-                Harvestora Global
-              </span>
-              <p className="text-white/70 text-[16px] leading-[1.6] pr-8">
-                Leading the global exchange of premium organic commodities through sustainable precision and industrial excellence.
-              </p>
-            </div>
-            <div>
-              <h4 className="text-[14px] font-semibold tracking-[0.05em] text-[#ffdea5] mb-6">Operations</h4>
-              <ul className="space-y-4">
-                {["Global Offices", "Quality Assurance", "Trade Compliance"].map((item) => (
-                  <li key={item}>
-                    <a href="#" className="text-white/70 hover:text-[#ffdea5] transition-colors hover:translate-x-1 inline-block text-[16px]">{item}</a>
-                  </li>
-                ))}
-              </ul>
-            </div>
-            <div>
-              <h4 className="text-[14px] font-semibold tracking-[0.05em] text-[#ffdea5] mb-6">Transparency</h4>
-              <ul className="space-y-4">
-                {["Privacy Policy", "Sustainability Report", "Career Portal"].map((item) => (
-                  <li key={item}>
-                    <a href="#" className="text-white/70 hover:text-[#ffdea5] transition-colors hover:translate-x-1 inline-block text-[16px]">{item}</a>
-                  </li>
-                ))}
-              </ul>
-            </div>
-            <div>
-              <h4 className="text-[14px] font-semibold tracking-[0.05em] text-[#ffdea5] mb-6">Newsletter</h4>
-              <p className="text-white/70 mb-4 text-[16px] leading-[1.6]">Trade insights and harvest reports.</p>
-              <div className="flex">
-                <input
-                  type="email"
-                  placeholder="Business Email"
-                  className="bg-white/10 border border-white/20 text-white p-2 flex-grow focus:outline-none focus:ring-1 focus:ring-[#ffdea5] text-[16px]"
-                />
-                <button className="bg-[#ffdea5] text-[#261900] px-4 text-[14px] font-semibold tracking-[0.05em]">Join</button>
-              </div>
-            </div>
-          </div>
-          <div className="max-w-[1280px] mx-auto px-16 mt-16 pt-8 border-t border-white/10 flex flex-col md:flex-row justify-between items-center gap-4">
-            <p className="text-white/50 text-[12px] font-semibold tracking-[0.05em]">
-              © 2024 Harvestora Global Enterprise. All rights reserved. Industrial Organic Precision.
-            </p>
-            <div className="flex gap-6">
-              {["public", "mail", "description"].map((icon) => (
-                <span key={icon} className="material-symbols-outlined cursor-pointer hover:text-[#ffdea5] transition-colors" style={{ fontSize: 20 }}>
-                  {icon}
-                </span>
-              ))}
-            </div>
-          </div>
-        </footer>
+        
 
       </div>
     </>

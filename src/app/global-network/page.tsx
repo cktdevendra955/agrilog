@@ -72,30 +72,7 @@ export default function GlobalNetworkPage() {
       `}</style>
 
       <div className="bg-[#f8faf9] text-[#191c1c] overflow-x-hidden min-h-screen">
-
-        {/* ── NAVBAR ── */}
-        <nav className="sticky top-0 w-full z-50 bg-white/70 backdrop-blur-xl border-b border-white/30 shadow-sm">
-          <div className="max-w-[1280px] mx-auto px-16 flex justify-between items-center h-20">
-            <div className="text-[24px] font-bold text-[#00261a] tracking-tight" style={{ fontFamily: "Sora, sans-serif" }}>
-              Harvestora Global
-            </div>
-            <div className="hidden md:flex gap-8 items-center">
-              <a href="#" className="text-[#414944] hover:text-[#00261a] transition-colors text-[16px]">Commodities</a>
-              <a href="#" className="text-[#414944] hover:text-[#00261a] transition-colors text-[16px]">Sustainability</a>
-              <a href="#" className="text-[#00261a] border-b-2 border-[#775a19] font-bold pb-1 text-[16px]">Global Network</a>
-              <a href="#" className="text-[#414944] hover:text-[#00261a] transition-colors text-[16px]">Supply Chain</a>
-              <a href="#" className="text-[#414944] hover:text-[#00261a] transition-colors text-[16px]">Certifications</a>
-            </div>
-            <div className="flex gap-4 items-center">
-              <button className="px-6 py-2 rounded-full border border-[#00261a] text-[#00261a] text-[14px] font-semibold tracking-[0.05em] hover:bg-[#00261a]/5 transition-all">
-                Investor Relations
-              </button>
-              <button className="px-6 py-2 rounded-full bg-[#00261a] text-white text-[14px] font-semibold tracking-[0.05em] border-b-2 border-[#775a19] hover:-translate-y-0.5 transition-all duration-300">
-                Request Quote
-              </button>
-            </div>
-          </div>
-        </nav>
+ 
 
         {/* ── HERO ── */}
         <header className="relative min-h-[819px] flex items-center overflow-hidden">
@@ -283,46 +260,7 @@ export default function GlobalNetworkPage() {
           </div>
         </section>
 
-        {/* ── FOOTER ── */}
-        <footer className="w-full pt-16 pb-8 bg-[#00261a] text-white border-t border-[#c0c8c3]">
-          <div className="max-w-[1280px] mx-auto px-16 grid grid-cols-1 md:grid-cols-4 gap-6">
-            <div>
-              <div className="text-[24px] font-bold text-[#775a19] mb-6" style={{ fontFamily: "Sora, sans-serif" }}>
-                Harvestora Global
-              </div>
-              <p className="text-white/70 text-[16px] leading-[1.6] mb-8">
-                Industrial Organic Precision. Scaling nature through engineering excellence.
-              </p>
-            </div>
-            {[
-              { heading: "Corporate", links: ["Global Offices", "Quality Assurance", "Trade Compliance"] },
-              { heading: "Resources", links: ["Sustainability Report", "Career Portal", "Privacy Policy"] },
-            ].map(({ heading, links }) => (
-              <div key={heading} className="flex flex-col gap-4">
-                <h4 className="text-white font-bold mb-2 text-[16px]">{heading}</h4>
-                {links.map((l) => (
-                  <a key={l} href="#" className="text-white/70 hover:text-[#ffdea5] transition-colors hover:translate-x-1 inline-block text-[16px]">{l}</a>
-                ))}
-              </div>
-            ))}
-            <div className="flex flex-col gap-4">
-              <h4 className="text-white font-bold mb-2 text-[16px]">Connect</h4>
-              <div className="flex gap-4 mb-4">
-                {["public", "mail"].map((icon) => (
-                  <span key={icon} className="material-symbols-outlined text-[#ffdea5] cursor-pointer">{icon}</span>
-                ))}
-              </div>
-              <button className="px-6 py-3 bg-[#ffdea5] text-[#261900] text-[14px] font-semibold tracking-[0.05em] rounded-sm w-fit">
-                Contact Support
-              </button>
-            </div>
-          </div>
-          <div className="max-w-[1280px] mx-auto px-16 mt-16 pt-8 border-t border-white/10">
-            <p className="text-white/50 text-sm text-center">
-              © 2024 Harvestora Global Enterprise. All rights reserved. Industrial Organic Precision.
-            </p>
-          </div>
-        </footer>
+         
 
       </div>
     </>
