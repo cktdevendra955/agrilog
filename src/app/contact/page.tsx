@@ -64,89 +64,267 @@ export default function ContactPage() {
          
 
         {/* ── HERO ── */}
-        <header className="relative pt-24 pb-12 overflow-hidden bg-[#f3f4f3]">
-          <div className="absolute inset-0 z-0 opacity-20">
-            <img
-              src="https://lh3.googleusercontent.com/aida-public/AB6AXuBOU62kCTvR6d1KKB29g11JKvSnLYP2XpGv7L5qJ_QrgvtDRp0lOIAzJq3nsJBeUi3NuRF17UGLqz5EGIRc88u1nu6oOumx7xQMJh-8WVd45W1B4gKAbJ__PsVqWDEzbOegO57Hs8ZWsPiMViPG2vucU-vrrylT6qLnDPWgQbN_5fe_H_r6KEF4Vw5c888-_ZPHYSdSR239IxiYAXtOhJnFVFYLvd-dJUWRQJFNWK9EvhXY9rr8M85A8H9NlVFM7w7GEXuAkQgf6ftb"
-              alt="Organic commodities"
-              className="w-full h-full object-cover"
-            />
-          </div>
-          <div className="max-w-[1280px] mx-auto px-16 relative z-10 text-center">
-            <h1 className="text-[48px] leading-[1.1] tracking-[-0.02em] font-bold text-[#00261a] mb-6">
-              Connect with Our <br /> Global Export Desk
-            </h1>
-            <p className="text-[18px] leading-[1.6] text-[#414944] max-w-2xl mx-auto">
-              Bridging the gap between organic agriculture and industrial precision. Reach our dedicated trade specialists for tailored commodity solutions.
+        {/* ── CONTACT HERO HEADER ── */}
+<header className="relative overflow-hidden bg-[#f8faf9] pt-28 pb-24">
+
+  {/* Background Image */}
+  <div className="absolute inset-0 z-0">
+    <img
+      src="https://lh3.googleusercontent.com/aida-public/AB6AXuBOU62kCTvR6d1KKB29g11JKvSnLYP2XpGv7L5qJ_QrgvtDRp0lOIAzJq3nsJBeUi3NuRF17UGLqz5EGIRc88u1nu6oOumx7xQMJh-8WVd45W1B4gKAbJ__PsVqWDEzbOegO57Hs8ZWsPiMViPG2vucU-vrrylT6qLnDPWgQbN_5fe_H_r6KEF4Vw5c888-_ZPHYSdSR239IxiYAXtOhJnFVFYLvd-dJUWRQJFNWK9EvhXY9rr8M85A8H9NlVFM7w7GEXuAkQgf6ftb"
+      alt="Organic commodities"
+      className="w-full h-full object-cover opacity-20"
+    />
+
+    {/* Overlay */}
+    <div className="absolute inset-0 bg-gradient-to-b from-[#f8faf9]/70 via-[#f8faf9]/90 to-[#f8faf9]" />
+  </div>
+
+  {/* Decorative Glow */}
+  <div className="absolute top-0 left-0 w-96 h-96 bg-[#775a19]/10 rounded-full blur-3xl -translate-x-1/2 -translate-y-1/2" />
+  <div className="absolute bottom-0 right-0 w-[30rem] h-[30rem] bg-[#00261a]/5 rounded-full blur-3xl translate-x-1/3 translate-y-1/3" />
+
+  {/* Content */}
+  <div className="relative z-10 max-w-[1280px] mx-auto px-6 md:px-10 lg:px-16">
+
+    <div className="max-w-4xl mx-auto text-center">
+
+      {/* Badge */}
+      <div className="inline-flex items-center gap-2 bg-[#ffdea5]/40 text-[#775a19] px-5 py-2 rounded-full text-xs font-bold tracking-[0.15em] uppercase mb-8">
+        <span className="material-symbols-outlined text-[18px]">
+          public
+        </span>
+        Global Trade Network
+      </div>
+
+      {/* Heading */}
+      <h1
+        className="text-[44px] md:text-[64px] leading-[1.02] tracking-[-0.04em] font-bold text-[#00261a] mb-8"
+        style={{ fontFamily: "Sora, sans-serif" }}
+      >
+        Connect with Our
+        <br />
+
+        <span className="text-[#775a19]">
+          Global Export Desk
+        </span>
+      </h1>
+
+      {/* Description */}
+      <p className="text-[18px] md:text-[20px] leading-[1.9] text-[#414944] max-w-3xl mx-auto mb-14">
+        Bridging the gap between organic agriculture and industrial precision.
+        Reach our dedicated trade specialists for enterprise export solutions,
+        global sourcing partnerships, and compliance-driven commodity supply.
+      </p>
+
+      {/* CTA Buttons */}
+      <div className="flex flex-col sm:flex-row items-center justify-center gap-5">
+
+        <button className="group inline-flex items-center gap-3 px-8 py-4 rounded-2xl bg-[#00261a] text-white font-bold tracking-[0.05em] hover:bg-[#0f3d2e] transition-all duration-300 shadow-xl">
+          Contact Trade Desk
+
+          <span className="material-symbols-outlined group-hover:translate-x-1 transition-transform">
+            arrow_forward
+          </span>
+        </button>
+
+        <button className="group inline-flex items-center gap-3 px-8 py-4 rounded-2xl border border-[#d9deda] bg-white/80 backdrop-blur text-[#00261a] font-bold tracking-[0.05em] hover:border-[#775a19] hover:shadow-lg transition-all duration-300">
+          Download Company Profile
+
+          <span className="material-symbols-outlined group-hover:translate-y-1 transition-transform">
+            south
+          </span>
+        </button>
+      </div>
+
+      {/* Stats */}
+      <div className="grid grid-cols-2 md:grid-cols-4 gap-5 mt-20">
+
+        {[
+          { value: "40+", label: "Export Nations" },
+          { value: "1,200+", label: "Enterprise Clients" },
+          { value: "ISO", label: "Certified Systems" },
+          { value: "24/7", label: "Trade Support" },
+        ].map(({ value, label }) => (
+          <div
+            key={label}
+            className="group bg-white/70 backdrop-blur border border-[#d9deda] rounded-3xl p-6 hover:-translate-y-2 hover:shadow-2xl hover:border-[#775a19] transition-all duration-500"
+          >
+
+            <p className="text-[34px] md:text-[40px] font-bold text-[#775a19] mb-2">
+              {value}
+            </p>
+
+            <p className="text-xs uppercase tracking-[0.18em] text-[#717974]">
+              {label}
             </p>
           </div>
-        </header>
+        ))}
+      </div>
+    </div>
+  </div>
+</header>
 
-        <main className="max-w-[1280px] mx-auto px-16 py-24">
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-12">
+        <main className="mx-auto px-16 py-24">
+          <div className="grid grid-cols-1 xl:grid-cols-12 gap-10 xl:gap-14">
 
-            {/* ── CONTACT FORM ── */}
-            <div className="lg:col-span-7">
-              <div className="glass-panel p-10 rounded-xl shadow-lg border border-[#c0c8c3]/30">
-                <h2 className="text-[32px] leading-[1.2] tracking-[-0.01em] font-semibold text-[#00261a] mb-8">Trade Inquiry</h2>
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                  {[
-                    { label: "Full Name", type: "text", placeholder: "John Doe", span: false },
-                    { label: "Company Name", type: "text", placeholder: "Global Trade Corp", span: false },
-                    { label: "Country of Operation", type: "text", placeholder: "United Arab Emirates", span: false },
-                  ].map(({ label, type, placeholder }) => (
-                    <div key={label} className="space-y-2">
-                      <label className="text-[14px] font-semibold tracking-[0.05em] text-[#414944] block">{label}</label>
-                      <input
-                        type={type}
-                        placeholder={placeholder}
-                        className="gold-glow w-full px-4 py-3 bg-white/60 border border-[#c0c8c3] rounded-[4px] focus:border-[#00261a] focus:bg-white outline-none transition-all text-[16px]"
-                      />
-                    </div>
-                  ))}
+    {/* ───────────────── CONTACT FORM ───────────────── */}
+    <div className="xl:col-span-7">
+      <div className="relative overflow-hidden rounded-3xl border border-[#d9deda] bg-white shadow-[0_20px_80px_rgba(0,0,0,0.06)]">
 
-                  {/* Commodity select */}
-                  <div className="space-y-2">
-                    <label className="text-[14px] font-semibold tracking-[0.05em] text-[#414944] block">Commodity Interest</label>
-                    <select className="gold-glow w-full px-4 py-3 bg-white/60 border border-[#c0c8c3] rounded-[4px] focus:border-[#00261a] focus:bg-white outline-none transition-all text-[16px]">
-                      <option value="" disabled>Select Commodity</option>
-                      <option>Organic Arabica Coffee</option>
-                      <option>Premium Basmati Rice</option>
-                      <option>Industrial Grade Soybeans</option>
-                      <option>Organic Cocoa Butter</option>
-                    </select>
-                  </div>
+        {/* top glow */}
+        <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-[#775a19] via-[#ffdea5] to-[#775a19]" />
 
-                  {/* Quantity */}
-                  <div className="md:col-span-2 space-y-2">
-                    <label className="text-[14px] font-semibold tracking-[0.05em] text-[#414944] block">Estimated Quantity (MT)</label>
-                    <input
-                      type="number"
-                      min="1"
-                      placeholder="500"
-                      className="gold-glow w-full px-4 py-3 bg-white/60 border border-[#c0c8c3] rounded-[4px] focus:border-[#00261a] focus:bg-white outline-none transition-all text-[16px]"
-                    />
-                  </div>
+        {/* decorative blur */}
+        <div className="absolute -top-20 -right-20 w-64 h-64 rounded-full bg-[#775a19]/10 blur-3xl" />
 
-                  {/* Message */}
-                  <div className="md:col-span-2 space-y-2">
-                    <label className="text-[14px] font-semibold tracking-[0.05em] text-[#414944] block">Message / Specification Details</label>
-                    <textarea
-                      rows={4}
-                      placeholder="Detail your specific requirements..."
-                      className="gold-glow w-full px-4 py-3 bg-white/60 border border-[#c0c8c3] rounded-[4px] focus:border-[#00261a] focus:bg-white outline-none transition-all text-[16px]"
-                    />
-                  </div>
+        <div className="relative z-10 p-8 md:p-12">
 
-                  {/* Submit */}
-                  <div className="md:col-span-2 pt-4">
-                    <button className="w-full py-4 bg-[#00261a] text-white text-[24px] leading-[1.3] font-semibold rounded-[4px] border-b-[3px] border-[#775a19] shadow-xl hover:-translate-y-0.5 hover:shadow-2xl active:translate-y-0 transition-all duration-300">
-                      Send Inquiry to Export Desk
-                    </button>
-                  </div>
+          {/* heading */}
+          <div className="mb-10">
+            <span className="inline-flex items-center gap-2 px-4 py-1 rounded-full bg-[#ffdea5]/30 text-[#775a19] text-xs font-bold tracking-[0.15em] uppercase mb-5">
+              <span className="material-symbols-outlined text-[18px]">
+                handshake
+              </span>
+              Global Trade Inquiry
+            </span>
+
+            <h2
+              className="text-[34px] md:text-[42px] leading-[1.1] font-bold tracking-[-0.03em] text-[#00261a] mb-5"
+              style={{ fontFamily: "Sora, sans-serif" }}
+            >
+              Connect With Our Export Desk
+            </h2>
+
+            <p className="text-[16px] md:text-[18px] leading-[1.8] text-[#414944] max-w-2xl">
+              Speak directly with our commodity specialists for tailored export
+              solutions, compliance guidance, and global sourcing partnerships.
+            </p>
+          </div>
+
+          {/* form */}
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+
+            {[
+              {
+                label: "Full Name",
+                type: "text",
+                placeholder: "John Doe",
+                icon: "person",
+              },
+              {
+                label: "Company Name",
+                type: "text",
+                placeholder: "Global Trade Corp",
+                icon: "apartment",
+              },
+              {
+                label: "Country of Operation",
+                type: "text",
+                placeholder: "United Arab Emirates",
+                icon: "public",
+              },
+              {
+                label: "Corporate Email",
+                type: "email",
+                placeholder: "john@enterprise.com",
+                icon: "mail",
+              },
+            ].map(({ label, type, placeholder, icon }) => (
+              <div key={label} className="space-y-3">
+                <label className="text-[13px] font-bold tracking-[0.12em] uppercase text-[#414944]">
+                  {label}
+                </label>
+
+                <div className="group relative">
+                  <span className="material-symbols-outlined absolute left-4 top-1/2 -translate-y-1/2 text-[#717974] group-focus-within:text-[#775a19] transition-colors">
+                    {icon}
+                  </span>
+
+                  <input
+                    type={type}
+                    placeholder={placeholder}
+                    className="w-full h-14 pl-14 pr-4 rounded-2xl border border-[#d9deda] bg-[#f8faf9] focus:bg-white focus:border-[#775a19] focus:ring-4 focus:ring-[#775a19]/10 outline-none transition-all text-[16px] text-[#00261a]"
+                  />
                 </div>
               </div>
+            ))}
+
+            {/* commodity */}
+            <div className="space-y-3">
+              <label className="text-[13px] font-bold tracking-[0.12em] uppercase text-[#414944]">
+                Commodity Interest
+              </label>
+
+              <div className="relative">
+                <span className="material-symbols-outlined absolute left-4 top-1/2 -translate-y-1/2 text-[#717974]">
+                  inventory_2
+                </span>
+
+                <select className="w-full h-14 pl-14 pr-4 rounded-2xl border border-[#d9deda] bg-[#f8faf9] focus:bg-white focus:border-[#775a19] focus:ring-4 focus:ring-[#775a19]/10 outline-none appearance-none transition-all text-[16px] text-[#00261a]">
+                  <option>Select Commodity</option>
+                  <option>Organic Arabica Coffee</option>
+                  <option>Premium Basmati Rice</option>
+                  <option>Industrial Grade Soybeans</option>
+                  <option>Organic Cocoa Butter</option>
+                </select>
+
+                <span className="material-symbols-outlined absolute right-4 top-1/2 -translate-y-1/2 text-[#717974] pointer-events-none">
+                  expand_more
+                </span>
+              </div>
             </div>
+
+            {/* quantity */}
+            <div className="space-y-3">
+              <label className="text-[13px] font-bold tracking-[0.12em] uppercase text-[#414944]">
+                Estimated Quantity (MT)
+              </label>
+
+              <div className="relative">
+                <span className="material-symbols-outlined absolute left-4 top-1/2 -translate-y-1/2 text-[#717974]">
+                  scale
+                </span>
+
+                <input
+                  type="number"
+                  placeholder="500"
+                  className="w-full h-14 pl-14 pr-4 rounded-2xl border border-[#d9deda] bg-[#f8faf9] focus:bg-white focus:border-[#775a19] focus:ring-4 focus:ring-[#775a19]/10 outline-none transition-all text-[16px] text-[#00261a]"
+                />
+              </div>
+            </div>
+
+            {/* textarea */}
+            <div className="md:col-span-2 space-y-3">
+              <label className="text-[13px] font-bold tracking-[0.12em] uppercase text-[#414944]">
+                Message / Specification Details
+              </label>
+
+              <textarea
+                rows={6}
+                placeholder="Describe your sourcing requirements, packaging specifications, target markets, certifications, or logistics expectations..."
+                className="w-full rounded-3xl border border-[#d9deda] bg-[#f8faf9] px-5 py-4 focus:bg-white focus:border-[#775a19] focus:ring-4 focus:ring-[#775a19]/10 outline-none transition-all text-[16px] text-[#00261a] resize-none"
+              />
+            </div>
+
+            {/* submit */}
+            <div className="md:col-span-2 pt-2">
+              <button className="group relative overflow-hidden w-full h-16 rounded-2xl bg-[#00261a] text-white font-bold text-[17px] tracking-[0.04em] shadow-xl hover:-translate-y-1 transition-all duration-300">
+
+                <div className="absolute inset-0 bg-gradient-to-r from-[#775a19] to-[#ffdea5] opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+
+                <span className="relative z-10 flex items-center justify-center gap-3 group-hover:text-[#261900] transition-colors">
+                  Send Inquiry to Export Desk
+
+                  <span className="material-symbols-outlined group-hover:translate-x-1 transition-transform">
+                    arrow_forward
+                  </span>
+                </span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
 
             {/* ── SIDEBAR: CHANNELS + OFFICES ── */}
             <div className="lg:col-span-5 space-y-12">
@@ -208,26 +386,125 @@ export default function ContactPage() {
         </main>
 
         {/* ── MAP SECTION ── */}
-        <section className="w-full h-[500px] relative overflow-hidden flex items-center justify-center">
-          <div className="absolute inset-0 bg-[#00261a]/85 z-10 pointer-events-none" />
-          <img
-            src="https://lh3.googleusercontent.com/aida-public/AB6AXuBEFnrJroseAi5aGbRsXnV6EgTkXKyxbfKVjYUfWs_C9gLkbcnPTSkE7mHI9fhPxkFlfj6VyFVgWDDU_XrbdWtnh9GNztOSv46uXbdjzIuK7sgnQtTpakVz93VYZ0DNSFi0LwYlYqVDIR4mMBK69zBYM6C3D27qRhKTZUOjLitO9AiRvCUjCVU9mqJVLytdLgi9IakN21Yw4DdMUm55HOTMdvln7-WjIE6nf5rc4tScr1JJdK_CiKrscRzmAirjYuDs8ybRCERe4b16"
-            alt="Global trade route map"
-            className="w-full h-full object-cover"
-          />
-          <div className="relative z-20 text-center px-6">
-            <span className="text-[14px] font-semibold tracking-[0.3em] text-[#775a19] uppercase mb-4 block">Strategic Integration</span>
-            <h2 className="text-[48px] leading-[1.1] tracking-[-0.02em] font-bold text-white mb-6">Our Global Network Reach</h2>
-            <div className="h-1 w-24 bg-[#775a19] mx-auto mb-8" />
-            <p className="text-white/80 max-w-xl mx-auto text-[16px] leading-[1.6]">
-              Connecting certified producers with international markets through optimized logistics corridors.
+        <section className="relative overflow-hidden py-28 md:py-36">
+
+  {/* Background Image */}
+  <div className="absolute inset-0">
+    <img
+      src="https://lh3.googleusercontent.com/aida-public/AB6AXuBEFnrJroseAi5aGbRsXnV6EgTkXKyxbfKVjYUfWs_C9gLkbcnPTSkE7mHI9fhPxkFlfj6VyFVgWDDU_XrbdWtnh9GNztOSv46uXbdjzIuK7sgnQtTpakVz93VYZ0DNSFi0LwYlYqVDIR4mMBK69zBYM6C3D27qRhKTZUOjLitO9AiRvCUjCVU9mqJVLytdLgi9IakN21Yw4DdMUm55HOTMdvln7-WjIE6nf5rc4tScr1JJdK_CiKrscRzmAirjYuDs8ybRCERe4b16"
+      alt="Global trade route map"
+      className="w-full h-full object-cover scale-105"
+    />
+
+    {/* overlays */}
+    <div className="absolute inset-0 bg-[#00261a]/85" />
+
+    <div className="absolute inset-0 bg-gradient-to-b from-[#00261a]/30 via-[#00261a]/70 to-[#00261a]" />
+
+    {/* glow */}
+    <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[700px] h-[700px] bg-[#775a19]/10 rounded-full blur-3xl" />
+  </div>
+
+  {/* Floating blur */}
+  <div className="absolute bottom-0 right-0 w-80 h-80 bg-[#ffdea5]/10 rounded-full blur-3xl z-10" />
+
+  {/* Content */}
+  <div className="relative z-20 max-w-[1280px] mx-auto px-6 md:px-10 lg:px-16">
+
+    <div className="max-w-4xl mx-auto text-center">
+
+      {/* badge */}
+      <div className="inline-flex items-center gap-3 px-5 py-2 rounded-full bg-white/10 backdrop-blur-md border border-white/10 mb-8">
+        <span className="material-symbols-outlined text-[#ffdea5] text-[20px]">
+          public
+        </span>
+
+        <span className="text-[12px] md:text-[13px] font-bold tracking-[0.25em] uppercase text-[#ffdea5]">
+          Strategic Integration
+        </span>
+      </div>
+
+      {/* heading */}
+      <h2
+        className="text-[40px] md:text-[58px] lg:text-[72px] leading-[0.98] tracking-[-0.05em] font-bold text-white mb-8"
+        style={{ fontFamily: "Sora, sans-serif" }}
+      >
+        Our Global
+        <span className="block text-[#ffdea5]">
+          Network Reach
+        </span>
+      </h2>
+
+      {/* divider */}
+      <div className="flex items-center justify-center gap-4 mb-10">
+        <div className="w-16 h-[2px] bg-[#775a19]" />
+
+        <div className="w-3 h-3 rounded-full bg-[#ffdea5]" />
+
+        <div className="w-16 h-[2px] bg-[#775a19]" />
+      </div>
+
+      {/* description */}
+      <p className="text-[17px] md:text-[20px] leading-[1.9] text-white/75 max-w-3xl mx-auto mb-14">
+        Connecting certified organic producers with international markets
+        through optimized logistics corridors, precision sourcing systems,
+        and sustainable export infrastructure across multiple continents.
+      </p>
+
+      {/* stats */}
+      <div className="grid grid-cols-2 md:grid-cols-4 gap-5">
+
+        {[
+          {
+            value: "40+",
+            label: "Countries",
+            icon: "public",
+          },
+          {
+            value: "1200+",
+            label: "Partners",
+            icon: "groups",
+          },
+          {
+            value: "250K+",
+            label: "MT Exported",
+            icon: "local_shipping",
+          },
+          {
+            value: "98%",
+            label: "On-Time Delivery",
+            icon: "verified",
+          },
+        ].map(({ value, label, icon }) => (
+          <div
+            key={label}
+            className="group rounded-3xl border border-white/10 bg-white/5 backdrop-blur-md p-6 hover:bg-white/10 hover:-translate-y-2 transition-all duration-500"
+          >
+
+            <div className="w-14 h-14 rounded-2xl bg-[#ffdea5]/10 border border-[#ffdea5]/20 flex items-center justify-center mx-auto mb-5 group-hover:bg-[#775a19] transition-all duration-300">
+
+              <span className="material-symbols-outlined text-[#ffdea5] group-hover:text-white transition-colors text-[28px]">
+                {icon}
+              </span>
+            </div>
+
+            <h3 className="text-[32px] md:text-[38px] font-bold text-white mb-2 tracking-[-0.03em]">
+              {value}
+            </h3>
+
+            <p className="text-[12px] md:text-[13px] uppercase tracking-[0.18em] text-white/60 font-semibold">
+              {label}
             </p>
           </div>
-        </section>
+        ))}
+      </div>
+    </div>
+  </div>
+</section>
 
         {/* ── TRUST WALL ── */}
         <section className="bg-[#f3f4f3] py-20 border-y border-[#c0c8c3]/10">
-          <div className="max-w-[1280px] mx-auto px-16">
+          <div className=" mx-auto px-16">
             <p className="text-[14px] font-semibold tracking-[0.2em] text-[#414944] text-center mb-16 uppercase">
               Global Export Certifications &amp; Standards
             </p>
