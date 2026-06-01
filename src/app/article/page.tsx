@@ -258,42 +258,186 @@ export default function ArticlePage() {
           </div>
 
           {/* ── RELATED READING ── */}
-          <section className="mt-32">
-            <div className="flex flex-col md:flex-row justify-between items-start md:items-center mb-12 gap-4">
-              <div>
-                <h2 className="text-[32px] leading-[1.2] tracking-[-0.01em] font-semibold text-[#00261a]">
-                  More Insights from the Harvestora Trade Desk
-                </h2>
-                <p className="text-[#414944] mt-2 text-[16px]">Expert analysis on global commodity shifts and sustainable trade.</p>
-              </div>
-              <a href="#" className="text-[#775a19] text-[14px] font-semibold tracking-[0.05em] hover:translate-x-1 transition-transform inline-flex items-center gap-2 group">
-                View All Insights <span className="material-symbols-outlined group-hover:translate-x-1 transition-transform">arrow_forward</span>
-              </a>
+          <section className="mt-24 lg:mt-32">
+
+  {/* Header */}
+  <div className="mb-12 flex flex-col gap-6 lg:mb-16 lg:flex-row lg:items-end lg:justify-between">
+
+    <div className="max-w-3xl">
+
+      <div className="mb-4 inline-flex items-center gap-2 rounded-full border border-[#775a19]/10 bg-[#775a19]/5 px-4 py-2 text-[11px] font-semibold uppercase tracking-[0.18em] text-[#775a19]">
+
+        <span
+          className="material-symbols-outlined"
+          style={{ fontSize: 16 }}
+        >
+          insights
+        </span>
+
+        Trade Intelligence
+
+      </div>
+
+      <h2
+        className="text-3xl font-bold leading-tight tracking-tight text-[#00261a] sm:text-4xl lg:text-5xl"
+        style={{ fontFamily: "Sora, sans-serif" }}
+      >
+        More Insights from the
+        <span className="block text-[#775a19]">
+          Harvestora Trade Desk
+        </span>
+      </h2>
+
+      <p className="mt-5 text-base leading-relaxed text-[#414944] sm:text-lg">
+        Expert analysis on global commodity shifts,
+        sustainability trends, and international export dynamics.
+      </p>
+
+    </div>
+
+    {/* CTA */}
+    <a
+      href="#"
+      className="group inline-flex items-center gap-3 self-start rounded-full border border-[#775a19]/15 bg-white px-6 py-3 text-sm font-semibold tracking-[0.08em] text-[#00261a] shadow-sm transition-all duration-300 hover:border-[#775a19] hover:bg-[#00261a] hover:text-white"
+    >
+
+      View All Insights
+
+      <span
+        className="material-symbols-outlined transition-transform duration-300 group-hover:translate-x-1"
+        style={{ fontSize: 18 }}
+      >
+        arrow_forward
+      </span>
+
+    </a>
+
+  </div>
+
+  {/* Articles Grid */}
+  <div className="grid grid-cols-1 gap-6 md:grid-cols-2 xl:grid-cols-3">
+
+    {relatedArticles.map(({ img, tag, title, desc }) => (
+
+      <article
+        key={title}
+        className="group relative overflow-hidden rounded-[30px] border border-[#c0c8c3]/20 bg-white shadow-sm transition-all duration-500 hover:-translate-y-2 hover:border-[#775a19]/30 hover:shadow-2xl"
+      >
+
+        {/* Image */}
+        <div className="relative overflow-hidden">
+
+          <div className="absolute left-5 top-5 z-10">
+
+            <div className="inline-flex items-center gap-2 rounded-full bg-white/90 px-4 py-2 text-[10px] font-bold uppercase tracking-[0.16em] text-[#775a19] shadow-lg backdrop-blur-xl">
+
+              <span
+                className="material-symbols-outlined"
+                style={{ fontSize: 14 }}
+              >
+                auto_awesome
+              </span>
+
+              {tag}
+
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-              {relatedArticles.map(({ img, tag, title, desc }) => (
-                <div key={title} className="flex flex-col bg-white rounded-xl overflow-hidden group cursor-pointer border border-[#c0c8c3]/30 hover:border-[#775a19] transition-all duration-300 shadow-sm hover:shadow-xl">
-                  <div className="h-56 overflow-hidden">
-                    <img src={img} alt={title} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" />
-                  </div>
-                  <div className="p-6 flex-grow flex flex-col">
-                    <span className="text-[#775a19] text-[14px] font-semibold tracking-widest mb-3 block uppercase">{tag}</span>
-                    <h3 className="text-[18px] font-semibold text-[#00261a] mb-4 group-hover:text-[#775a19] transition-colors">{title}</h3>
-                    <p className="text-sm text-[#414944] line-clamp-3 mb-6 text-[16px] leading-[1.6]">{desc}</p>
-                    <div className="mt-auto flex items-center text-[#00261a] text-[14px] font-semibold tracking-wider uppercase gap-2">
-                      Read More <span className="material-symbols-outlined" style={{ fontSize: 18 }}>east</span>
-                    </div>
-                  </div>
-                </div>
-              ))}
+          </div>
+
+          <div className="h-64 overflow-hidden">
+
+            <img
+              src={img}
+              alt={title}
+              className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-110"
+            />
+
+          </div>
+
+          {/* Overlay */}
+          <div className="absolute inset-0 bg-gradient-to-t from-[#00261a]/20 to-transparent opacity-0 transition-opacity duration-500 group-hover:opacity-100" />
+
+        </div>
+
+        {/* Content */}
+        <div className="flex flex-1 flex-col p-7">
+
+          {/* Icon */}
+          <div className="mb-5 flex h-14 w-14 items-center justify-center rounded-full bg-[#00261a]/5 text-[#775a19] transition-all duration-500 group-hover:bg-[#00261a] group-hover:text-[#ffdea5]">
+
+            <span
+              className="material-symbols-outlined"
+              style={{ fontSize: 28 }}
+            >
+              monitoring
+            </span>
+
+          </div>
+
+          {/* Title */}
+          <h3
+            className="text-2xl font-bold leading-snug text-[#00261a] transition-colors duration-300 group-hover:text-[#775a19]"
+            style={{ fontFamily: "Sora, sans-serif" }}
+          >
+            {title}
+          </h3>
+
+          {/* Divider */}
+          <div className="mt-5 h-[3px] w-14 rounded-full bg-[#775a19] transition-all duration-500 group-hover:w-24" />
+
+          {/* Description */}
+          <p className="mt-5 line-clamp-3 text-[15px] leading-relaxed text-[#414944] sm:text-base">
+            {desc}
+          </p>
+
+          {/* Footer */}
+          <div className="mt-8 flex items-center justify-between border-t border-[#c0c8c3]/20 pt-6">
+
+            <div className="flex items-center gap-2 text-sm font-semibold uppercase tracking-[0.12em] text-[#00261a] transition-colors duration-300 group-hover:text-[#775a19]">
+
+              Read More
+
+              <span
+                className="material-symbols-outlined transition-transform duration-300 group-hover:translate-x-1"
+                style={{ fontSize: 18 }}
+              >
+                east
+              </span>
+
             </div>
-          </section>
+
+            <div className="flex items-center gap-1 text-[#775a19]">
+
+              {[1, 2, 3].map((star) => (
+
+                <span
+                  key={star}
+                  className="material-symbols-outlined"
+                  style={{ fontSize: 16 }}
+                >
+                  star
+                </span>
+
+              ))}
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </article>
+
+    ))}
+
+  </div>
+
+</section>  
 
         </main>
 
         {/* ── FOOTER ── */}
-        <footer className="bg-[#00261a] text-white mt-32 pt-24 pb-12">
+        <div className="bg-[#00261a] text-white mt-32 pt-24 pb-12">
           <div className="max-w-[1280px] mx-auto px-16">
 
             {/* Final CTA */}
@@ -316,53 +460,8 @@ export default function ArticlePage() {
               </div>
             </div>
 
-            {/* Footer Links */}
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 border-t border-white/10 pt-16">
-              <div>
-                <div className="text-[24px] font-bold text-[#775a19] mb-8" style={{ fontFamily: "Sora,sans-serif" }}>Harvestora Global</div>
-                <p className="text-white/70 text-sm leading-relaxed max-w-xs">
-                  Bridging organic agriculture with industrial precision for global trade markets. Authoritative, sustainable, and reliable sourcing at scale.
-                </p>
-              </div>
-              <div>
-                <h4 className="text-[#beedd7] text-xs font-semibold tracking-widest uppercase mb-8">Company</h4>
-                <ul className="space-y-4 text-white/70 text-[16px]">
-                  {["About Harvestora", "Global Offices", "Quality Assurance", "Career Portal"].map((l) => (
-                    <li key={l}><a href="#" className="hover:text-[#ffdea5] transition-colors">{l}</a></li>
-                  ))}
-                </ul>
-              </div>
-              <div>
-                <h4 className="text-[#beedd7] text-xs font-semibold tracking-widest uppercase mb-8">Compliance</h4>
-                <ul className="space-y-4 text-white/70 text-[16px]">
-                  {["Trade Compliance", "Sustainability Report", "Certification Registry", "Privacy Policy"].map((l) => (
-                    <li key={l}><a href="#" className="hover:text-[#ffdea5] transition-colors">{l}</a></li>
-                  ))}
-                </ul>
-              </div>
-              <div>
-                <h4 className="text-[#beedd7] text-xs font-semibold tracking-widest uppercase mb-8">Global Presence</h4>
-                <div className="text-white/70 text-sm space-y-5">
-                  {officeLocations.map(({ city, sub }) => (
-                    <p key={city} className="flex items-start gap-3">
-                      <span className="material-symbols-outlined text-[#775a19] mt-0.5" style={{ fontSize: 20 }}>location_on</span>
-                      <span>{city}<br /><span className="text-xs opacity-60">{sub}</span></span>
-                    </p>
-                  ))}
-                </div>
-              </div>
-            </div>
-
-            <div className="mt-20 pt-8 border-t border-white/5 flex flex-col md:flex-row justify-between items-center gap-6 text-white/50 text-xs">
-              <p>© 2024 Harvestora Global Enterprise. All rights reserved. Industrial Organic Precision.</p>
-              <div className="flex gap-8">
-                {["LinkedIn", "Twitter", "Instagram"].map((s) => (
-                  <a key={s} href="#" className="hover:text-white transition-colors">{s}</a>
-                ))}
-              </div>
-            </div>
           </div>
-        </footer>
+        </div>
 
       </div>
     </>
