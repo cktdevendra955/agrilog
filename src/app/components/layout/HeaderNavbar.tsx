@@ -4,7 +4,7 @@ import React, { useState } from "react";
 import Link from "next/link";
 import { Menu, X } from "lucide-react";
 
-import { HEADER_NAVIGATION } from "../../constants/navigation";
+import { HEADER_NAVIGATION } from "@/app/constants/navigation";
 
 const HeaderNavbar = () => {
   const [isOpen, setIsOpen] = useState(false);
