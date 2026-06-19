@@ -88,8 +88,7 @@ export default function AboutPage() {
       <div className="bg-[#f8faf9] text-[#191c1c] min-h-screen">
         <main>
           {/* ── BRAND STORY HERO ── */}
-          <section className="relative flex min-h-screen items-center overflow-hidden">
-            {/* Background */}
+          <section className="relative flex min-h-[100svh] items-center overflow-hidden">
             <div className="absolute inset-0 z-0">
               <img
                 src="https://lh3.googleusercontent.com/aida-public/AB6AXuAQ_nYj39OCk-nEdfS5pzNUCB6jr6IAZV0O5rU2glZeVJQSI4SITw57GKA2YHnDM_A8tIMkKimTv3Hs7RB7_B6_8E2dNQds-MA7SX3zwSay5D_dG22XWRr3s8WFg_xSF_bmzX9xV6jWgphsLnDWLXQ_a-OSim96c2eUAlehZtYWSN4mmg1S9snD86M_vY3MjiWbUDiXkPVoEQj4Q_3ouCN6lQG7Hi2ZuAA1ZFBPbZfKZfCWfsO1qBizviZyL0YA0gH9yvEVf70UZUxL"
@@ -97,31 +96,22 @@ export default function AboutPage() {
                 className="h-full w-full object-cover"
                 style={{ filter: "grayscale(0.2) brightness(0.75)" }}
               />
-
-              {/* Overlay */}
               <div className="absolute inset-0 bg-gradient-to-r from-[#00261a]/90 via-[#00261a]/70 to-[#00261a]/20" />
-
-              {/* Extra Blur Glow */}
               <div className="absolute left-0 top-0 h-full w-full bg-black/10 backdrop-blur-[2px]" />
             </div>
 
             {/* Content */}
-            <div className="relative z-10 mx-auto w-full max-w-7xl px-4 py-28 sm:px-6 lg:px-8">
+            <div className="relative z-10 mx-auto w-full max-w-7xl px-4 py-24 sm:px-6 sm:py-28 lg:px-8">
               <div className="max-w-3xl text-white">
                 {/* Badge */}
-                <div className="mb-6 inline-flex items-center gap-2 rounded-full border border-[#ffdea5]/20 bg-[#775a19]/90 px-5 py-2 text-xs font-semibold uppercase tracking-[0.2em] text-white backdrop-blur-md">
-                  <span
-                    className="material-symbols-outlined"
-                    style={{ fontSize: 18 }}
-                  >
-                    public
-                  </span>
+                <div className="mb-6 inline-flex items-center gap-2 rounded-full border border-[#ffdea5]/20 bg-[#775a19]/90 px-4 sm:px-5 py-2 text-xs font-semibold uppercase tracking-[0.2em] text-white backdrop-blur-md">
+                  <span className="material-symbols-outlined" style={{ fontSize: 16 }}>public</span>
                   Our Origins
                 </div>
 
                 {/* Heading */}
                 <h1
-                  className="text-4xl font-bold leading-tight tracking-tight text-white sm:text-5xl lg:text-7xl"
+                  className="text-[36px] sm:text-5xl lg:text-7xl font-bold leading-tight tracking-tight text-white"
                   style={{ fontFamily: "Sora, sans-serif" }}
                 >
                   The Billion-Dollar
@@ -129,57 +119,32 @@ export default function AboutPage() {
                 </h1>
 
                 {/* Description */}
-                <p className="mt-8 max-w-2xl text-base leading-relaxed text-white/85 sm:text-lg lg:text-xl">
-                  Harvestora Global was born from a singular vision: to honor
-                  the ancestral wisdom of Indian farmers while empowering them
-                  with world-class industrial precision. We don't just export
-                  products; we curate a legacy of quality.
+                <p className="mt-6 sm:mt-8 max-w-2xl text-[15px] sm:text-base lg:text-xl leading-relaxed text-white/85">
+                  Harvestora Global was born from a singular vision: to honor the ancestral wisdom of Indian farmers while empowering them with world-class industrial precision. We don't just export products; we curate a legacy of quality.
                 </p>
 
                 {/* Stats */}
-                <div className="mt-10 flex flex-wrap gap-6">
-                  <div className="glass-card rounded-2xl border border-white/10 bg-white/5 px-6 py-4 backdrop-blur-md">
-                    <h3 className="text-2xl font-bold text-[#ffdea5]">40+</h3>
-
-                    <p className="mt-1 text-sm text-white/70">
-                      Countries Served
-                    </p>
-                  </div>
-
-                  <div className="glass-card rounded-2xl border border-white/10 bg-white/5 px-6 py-4 backdrop-blur-md">
-                    <h3 className="text-2xl font-bold text-[#ffdea5]">100%</h3>
-
-                    <p className="mt-1 text-sm text-white/70">
-                      Organic Commitment
-                    </p>
-                  </div>
-
-                  <div className="glass-card rounded-2xl border border-white/10 bg-white/5 px-6 py-4 backdrop-blur-md">
-                    <h3 className="text-2xl font-bold text-[#ffdea5]">24/7</h3>
-
-                    <p className="mt-1 text-sm text-white/70">Global Support</p>
-                  </div>
+                <div className="mt-8 sm:mt-10 flex flex-wrap gap-3 sm:gap-6">
+                  {[
+                    { val: "40+", label: "Countries Served" },
+                    { val: "100%", label: "Organic Commitment" },
+                    { val: "24/7", label: "Global Support" },
+                  ].map(({ val, label }) => (
+                    <div key={label} className="glass-card rounded-2xl border border-white/10 bg-white/5 px-5 py-3 sm:px-6 sm:py-4 backdrop-blur-md">
+                      <h3 className="text-xl sm:text-2xl font-bold text-[#ffdea5]">{val}</h3>
+                      <p className="mt-1 text-xs sm:text-sm text-white/70">{label}</p>
+                    </div>
+                  ))}
                 </div>
 
                 {/* Buttons */}
-                <div className="mt-12 flex flex-col gap-4 sm:flex-row">
-                  <button className="group inline-flex items-center justify-center gap-3 rounded-xl bg-[#00261a] px-8 py-4 text-sm font-semibold uppercase tracking-[0.1em] text-white transition-all duration-300 hover:bg-[#0b3d2d] hover:shadow-2xl">
+                <div className="mt-10 sm:mt-12 flex flex-col sm:flex-row gap-3 sm:gap-4">
+                  <button className="group inline-flex items-center justify-center gap-3 rounded-xl bg-[#00261a] px-6 sm:px-8 py-3.5 sm:py-4 text-sm font-semibold uppercase tracking-[0.1em] text-white transition-all duration-300 hover:bg-[#0b3d2d] hover:shadow-2xl">
                     Explore Our Journey
-                    <span
-                      className="material-symbols-outlined transition-transform duration-300 group-hover:translate-x-1"
-                      style={{ fontSize: 20 }}
-                    >
-                      arrow_forward
-                    </span>
+                    <span className="material-symbols-outlined transition-transform duration-300 group-hover:translate-x-1" style={{ fontSize: 20 }}>arrow_forward</span>
                   </button>
-
-                  <button className="group inline-flex items-center justify-center gap-3 rounded-xl border border-white/20 bg-white/10 px-8 py-4 text-sm font-semibold uppercase tracking-[0.1em] text-white backdrop-blur-md transition-all duration-300 hover:bg-white hover:text-[#00261a]">
-                    <span
-                      className="material-symbols-outlined"
-                      style={{ fontSize: 20 }}
-                    >
-                      play_circle
-                    </span>
+                  <button className="group inline-flex items-center justify-center gap-3 rounded-xl border border-white/20 bg-white/10 px-6 sm:px-8 py-3.5 sm:py-4 text-sm font-semibold uppercase tracking-[0.1em] text-white backdrop-blur-md transition-all duration-300 hover:bg-white hover:text-[#00261a]">
+                    <span className="material-symbols-outlined" style={{ fontSize: 20 }}>play_circle</span>
                     Watch the Film
                   </button>
                 </div>
@@ -187,155 +152,87 @@ export default function AboutPage() {
             </div>
           </section>
 
-          {/* ── 2. LEADERSHIP & VISION ── */}
+          {/* ── LEADERSHIP & VISION ── */}
           <section className="bg-[#f3f4f3] py-16 lg:py-24">
-            <div className="mx-auto grid w-full max-w-7xl grid-cols-1 items-center gap-14 px-4 sm:px-6 lg:grid-cols-2 lg:gap-20 lg:px-8">
+            <div className="mx-auto grid w-full max-w-7xl grid-cols-1 items-center gap-12 px-4 sm:px-6 lg:grid-cols-2 lg:gap-20 lg:px-8">
               {/* Image Side */}
               <div className="relative">
-                {/* Decorative Border */}
-                <div className="absolute -left-4 -top-4 h-24 w-24 border-l-4 border-t-4 border-[#775a19]/30 lg:-left-8 lg:-top-8 lg:h-32 lg:w-32" />
+                <div className="absolute -left-3 -top-3 h-20 w-20 border-l-4 border-t-4 border-[#775a19]/30 sm:-left-4 sm:-top-4 sm:h-24 sm:w-24 lg:-left-8 lg:-top-8 lg:h-32 lg:w-32" />
 
-                {/* Main Image */}
-                <div className="group relative overflow-hidden rounded-[32px] shadow-2xl">
+                <div className="group relative overflow-hidden rounded-[24px] sm:rounded-[32px] shadow-2xl">
                   <img
                     src="https://lh3.googleusercontent.com/aida-public/AB6AXuCSslnWLZEZdX1-ViNC8SMmT-pgs3qkIWNRc2dvtI-YT-P0MhwClHOHIoG1vzF5_NCbrA_3Yd4NJ-jKmvMnucK33ea0YKBP-k3iBXrGv9DN5Vkgnn4Ca8Xi58dL4jN0FXE_Pak2o7KFl2F6oDznqRET2XkehNpQsWt0yN2fcXXSJbideyM1WJL0VHoHeoMyuYj9Hqbn3Av8rBHK5P9cke6amrJTEmY-eU2OQzEqgRB6wiC0CmqiX4npsfIl6ru3eJWU_J278EoDnJJu"
                     alt="Leadership"
-                    className="h-[420px] w-full object-cover transition-transform duration-700 group-hover:scale-105 sm:h-[520px] lg:h-[640px]"
+                    className="h-[320px] sm:h-[440px] lg:h-[640px] w-full object-cover transition-transform duration-700 group-hover:scale-105"
                   />
-
-                  {/* Overlay */}
                   <div className="absolute inset-0 bg-gradient-to-t from-[#00261a]/40 to-transparent" />
                 </div>
 
                 {/* Quote Card */}
-                <div className="glass-card relative -mt-10 ml-auto w-full max-w-[320px] rounded-3xl border border-white/20 bg-white/80 p-6 shadow-2xl backdrop-blur-xl sm:p-8 lg:absolute lg:-bottom-10 lg:-right-10 lg:mt-0">
-                  <div className="mb-4 flex h-14 w-14 items-center justify-center rounded-full bg-[#00261a] text-[#ffdea5]">
-                    <span
-                      className="material-symbols-outlined"
-                      style={{ fontSize: 28 }}
-                    >
-                      format_quote
-                    </span>
+                <div className="glass-card relative -mt-10 ml-auto w-full max-w-[300px] sm:max-w-[320px] rounded-3xl border border-white/20 bg-white/80 p-5 sm:p-8 shadow-2xl backdrop-blur-xl lg:absolute lg:-bottom-10 lg:-right-10 lg:mt-0">
+                  <div className="mb-4 flex h-12 w-12 sm:h-14 sm:w-14 items-center justify-center rounded-full bg-[#00261a] text-[#ffdea5]">
+                    <span className="material-symbols-outlined" style={{ fontSize: 24 }}>format_quote</span>
                   </div>
-
-                  <p
-                    className="text-xl font-semibold leading-relaxed text-[#00261a] italic lg:text-2xl"
-                    style={{ fontFamily: "Sora, sans-serif" }}
-                  >
-                    “Scale is nothing without soul.”
+                  <p className="text-lg sm:text-xl lg:text-2xl font-semibold leading-relaxed text-[#00261a] italic" style={{ fontFamily: "Sora, sans-serif" }}>
+                    "Scale is nothing without soul."
                   </p>
-
-                  <div className="mt-6">
-                    <p className="text-sm font-semibold uppercase tracking-[0.15em] text-[#775a19]">
-                      Aravind Sharma
-                    </p>
-
-                    <p className="mt-1 text-sm text-[#414944]">
-                      CEO, Harvestora Global
-                    </p>
+                  <div className="mt-5 sm:mt-6">
+                    <p className="text-xs sm:text-sm font-semibold uppercase tracking-[0.15em] text-[#775a19]">Aravind Sharma</p>
+                    <p className="mt-1 text-xs sm:text-sm text-[#414944]">CEO, Harvestora Global</p>
                   </div>
                 </div>
               </div>
 
               {/* Content Side */}
-              <div>
-                {/* Badge */}
+              <div className="mt-6 lg:mt-0">
                 <div className="mb-6 inline-flex items-center gap-2 rounded-full border border-[#775a19]/10 bg-[#775a19]/10 px-5 py-2 text-xs font-semibold uppercase tracking-[0.2em] text-[#775a19]">
-                  <span
-                    className="material-symbols-outlined"
-                    style={{ fontSize: 18 }}
-                  >
-                    groups
-                  </span>
+                  <span className="material-symbols-outlined" style={{ fontSize: 18 }}>groups</span>
                   Leadership Vision
                 </div>
 
-                {/* Heading */}
-                <h2
-                  className="text-4xl font-bold leading-tight tracking-tight text-[#00261a] sm:text-5xl"
-                  style={{ fontFamily: "Sora, sans-serif" }}
-                >
+                <h2 className="text-[32px] sm:text-4xl lg:text-5xl font-bold leading-tight tracking-tight text-[#00261a]" style={{ fontFamily: "Sora, sans-serif" }}>
                   Bridging Fields to
                   <span className="block text-[#775a19]">Global Markets</span>
                 </h2>
 
-                {/* Paragraphs */}
-                <p className="mt-8 text-base leading-relaxed text-[#414944] lg:text-lg">
-                  Our leadership team bridges two worlds: the deep-rooted
-                  knowledge of regional agriculture and the complex logistics of
-                  international trade.
+                <p className="mt-6 sm:mt-8 text-[15px] sm:text-base lg:text-lg leading-relaxed text-[#414944]">
+                  Our leadership team bridges two worlds: the deep-rooted knowledge of regional agriculture and the complex logistics of international trade.
+                </p>
+                <p className="mt-4 sm:mt-5 text-[15px] sm:text-base lg:text-lg leading-relaxed text-[#414944]">
+                  We've built Harvestora as a bridge across the oceans, ensuring that the finest organic produce reaches the most demanding markets in the UAE, USA, and EU.
                 </p>
 
-                <p className="mt-5 text-base leading-relaxed text-[#414944] lg:text-lg">
-                  We’ve built Harvestora as a bridge across the oceans, ensuring
-                  that the finest organic produce reaches the most demanding
-                  markets in the UAE, USA, and EU.
-                </p>
-
-                {/* Stats */}
-                <div className="mt-12 grid grid-cols-1 gap-5 sm:grid-cols-2">
-                  {/* Card 1 */}
-                  <div className="glass-card rounded-3xl border border-[#c0c8c3]/30 bg-white/70 p-6 transition-all duration-300 hover:-translate-y-2 hover:shadow-xl">
-                    <div className="mb-4 flex h-14 w-14 items-center justify-center rounded-full bg-[#00261a]/5 text-[#00261a]">
-                      <span
-                        className="material-symbols-outlined"
-                        style={{ fontSize: 28 }}
-                      >
-                        workspace_premium
-                      </span>
+                <div className="mt-10 sm:mt-12 grid grid-cols-1 gap-4 sm:grid-cols-2 sm:gap-5">
+                  {[
+                    { icon: "workspace_premium", val: "15+", label: "Years of Excellence" },
+                    { icon: "handshake", val: "40+", label: "Global Partnerships" },
+                  ].map(({ icon, val, label }) => (
+                    <div key={label} className="glass-card rounded-3xl border border-[#c0c8c3]/30 bg-white/70 p-5 sm:p-6 transition-all duration-300 hover:-translate-y-2 hover:shadow-xl">
+                      <div className="mb-4 flex h-12 w-12 sm:h-14 sm:w-14 items-center justify-center rounded-full bg-[#00261a]/5 text-[#00261a]">
+                        <span className="material-symbols-outlined" style={{ fontSize: 26 }}>{icon}</span>
+                      </div>
+                      <h3 className="text-3xl sm:text-4xl font-bold text-[#775a19]" style={{ fontFamily: "Sora, sans-serif" }}>{val}</h3>
+                      <p className="mt-2 text-xs sm:text-sm font-semibold uppercase tracking-[0.15em] text-[#414944]">{label}</p>
                     </div>
-
-                    <h3
-                      className="text-4xl font-bold text-[#775a19]"
-                      style={{ fontFamily: "Sora, sans-serif" }}
-                    >
-                      15+
-                    </h3>
-
-                    <p className="mt-2 text-sm font-semibold uppercase tracking-[0.15em] text-[#414944]">
-                      Years of Excellence
-                    </p>
-                  </div>
-
-                  {/* Card 2 */}
-                  <div className="glass-card rounded-3xl border border-[#c0c8c3]/30 bg-white/70 p-6 transition-all duration-300 hover:-translate-y-2 hover:shadow-xl">
-                    <div className="mb-4 flex h-14 w-14 items-center justify-center rounded-full bg-[#00261a]/5 text-[#00261a]">
-                      <span
-                        className="material-symbols-outlined"
-                        style={{ fontSize: 28 }}
-                      >
-                        handshake
-                      </span>
-                    </div>
-
-                    <h3
-                      className="text-4xl font-bold text-[#775a19]"
-                      style={{ fontFamily: "Sora, sans-serif" }}
-                    >
-                      40+
-                    </h3>
-
-                    <p className="mt-2 text-sm font-semibold uppercase tracking-[0.15em] text-[#414944]">
-                      Global Partnerships
-                    </p>
-                  </div>
+                  ))}
                 </div>
               </div>
             </div>
           </section>
 
-          {/* ── 3. ECOSYSTEM ── */}
-          <section className="py-24">
-            <div className=" mx-auto px-16">
-              <div className="text-center mb-16">
-                <h2 className="text-[48px] leading-[1.1] tracking-[-0.02em] font-bold text-[#00261a] mb-4">
+          {/* ── ECOSYSTEM ── */}
+          <section className="py-16 sm:py-20 md:py-24">
+            <div className="max-w-[1280px] mx-auto px-4 sm:px-6 md:px-10 lg:px-16">
+              <div className="text-center mb-12 sm:mb-16">
+                <h2 className="text-[32px] sm:text-[40px] md:text-[48px] leading-[1.1] tracking-[-0.02em] font-bold text-[#00261a] mb-4">
                   A Unified Ecosystem
                 </h2>
-                <p className="text-[18px] leading-[1.6] text-[#414944] max-w-2xl mx-auto">
+                <p className="text-[16px] sm:text-[18px] leading-[1.6] text-[#414944] max-w-2xl mx-auto">
                   Where artisanal farming meets peak industrial capacity.
                 </p>
               </div>
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-5 sm:gap-6">
                 {[
                   {
                     num: "01",
@@ -354,86 +251,60 @@ export default function AboutPage() {
                     alt: "Infrastructure",
                   },
                 ].map(({ num, icon, title, desc, img, alt }) => (
-                  <div
-                    key={num}
-                    className="glass-card p-12 rounded-2xl group transition-all duration-500 hover:shadow-2xl"
-                  >
-                    <div className="flex justify-between items-start mb-8">
-                      <span
-                        className="material-symbols-outlined text-[#775a19]"
-                        style={{
-                          fontVariationSettings: "'FILL' 1",
-                          fontSize: 40,
-                        }}
-                      >
+                  <div key={num} className="glass-card p-6 sm:p-8 md:p-10 lg:p-12 rounded-2xl group transition-all duration-500 hover:shadow-2xl">
+                    <div className="flex justify-between items-start mb-6 sm:mb-8">
+                      <span className="material-symbols-outlined text-[#775a19]" style={{ fontVariationSettings: "'FILL' 1", fontSize: 36 }}>
                         {icon}
                       </span>
-                      <span className="text-[32px] leading-[1.2] font-semibold text-[#00261a]/10 group-hover:text-[#00261a]/20 transition-colors">
+                      <span className="text-[24px] sm:text-[32px] leading-[1.2] font-semibold text-[#00261a]/10 group-hover:text-[#00261a]/20 transition-colors">
                         {num}
                       </span>
                     </div>
-                    <h3 className="text-[32px] leading-[1.2] tracking-[-0.01em] font-semibold text-[#00261a] mb-4">
+                    <h3 className="text-[24px] sm:text-[28px] md:text-[32px] leading-[1.2] tracking-[-0.01em] font-semibold text-[#00261a] mb-3 sm:mb-4">
                       {title}
                     </h3>
-                    <p className="text-[16px] leading-[1.6] text-[#414944] mb-8">
+                    <p className="text-[15px] sm:text-[16px] leading-[1.6] text-[#414944] mb-6 sm:mb-8">
                       {desc}
                     </p>
-                    <img
-                      src={img}
-                      alt={alt}
-                      className="w-full h-48 object-cover rounded-[4px]"
-                    />
+                    <img src={img} alt={alt} className="w-full h-40 sm:h-48 object-cover rounded-[4px]" />
                   </div>
                 ))}
               </div>
             </div>
           </section>
 
-          {/* ── 4. ACHIEVEMENT TIMELINE ── */}
-          <section className="py-24 bg-[#00261a] text-white">
-            <div className="max-w-[1280px] mx-auto px-16">
-              <h2 className="text-[48px] leading-[1.1] tracking-[-0.02em] font-bold text-center mb-20">
+          {/* ── ACHIEVEMENT TIMELINE ── */}
+          <section className="py-16 sm:py-20 md:py-24 bg-[#00261a] text-white">
+            <div className="max-w-[1280px] mx-auto px-4 sm:px-6 md:px-10 lg:px-16">
+              <h2 className="text-[32px] sm:text-[40px] md:text-[48px] leading-[1.1] tracking-[-0.02em] font-bold text-center mb-14 sm:mb-20">
                 Milestones of Excellence
               </h2>
-              <div className="relative">
+
+              {/* Desktop Timeline */}
+              <div className="relative hidden md:block">
                 <div className="absolute left-1/2 -translate-x-1/2 w-0.5 h-full bg-[#775a19]/30" />
-                <div className="space-y-24">
+                <div className="space-y-16 lg:space-y-24">
                   {milestones.map(({ year, desc, left, active, pulse }) => (
-                    <div
-                      key={year}
-                      className="relative flex items-center justify-between"
-                    >
+                    <div key={year} className="relative flex items-center justify-between">
                       {left ? (
                         <>
                           <div className="w-5/12 text-right">
-                            <h4 className="text-[24px] leading-[1.3] font-semibold text-[#775a19] mb-2">
-                              {year}
-                            </h4>
-                            <p className="text-white/70 text-[16px]">{desc}</p>
+                            <h4 className="text-[20px] lg:text-[24px] leading-[1.3] font-semibold text-[#775a19] mb-2">{year}</h4>
+                            <p className="text-white/70 text-[15px] lg:text-[16px]">{desc}</p>
                           </div>
                           <div
                             className={`absolute left-1/2 -translate-x-1/2 w-4 h-4 rounded-full ${active ? "bg-[#775a19]" : pulse ? "bg-[#775a19] pulse-gold" : "bg-white/20"}`}
-                            style={
-                              active
-                                ? { boxShadow: "0 0 15px rgba(119,90,25,1)" }
-                                : pulse
-                                  ? {}
-                                  : {}
-                            }
+                            style={active ? { boxShadow: "0 0 15px rgba(119,90,25,1)" } : {}}
                           />
                           <div className="w-5/12" />
                         </>
                       ) : (
                         <>
                           <div className="w-5/12" />
-                          <div
-                            className={`absolute left-1/2 -translate-x-1/2 w-4 h-4 rounded-full ${pulse ? "bg-[#775a19] pulse-gold" : "bg-white/20"}`}
-                          />
+                          <div className={`absolute left-1/2 -translate-x-1/2 w-4 h-4 rounded-full ${pulse ? "bg-[#775a19] pulse-gold" : "bg-white/20"}`} />
                           <div className="w-5/12 text-left">
-                            <h4 className="text-[24px] leading-[1.3] font-semibold text-[#775a19] mb-2">
-                              {year}
-                            </h4>
-                            <p className="text-white/70 text-[16px]">{desc}</p>
+                            <h4 className="text-[20px] lg:text-[24px] leading-[1.3] font-semibold text-[#775a19] mb-2">{year}</h4>
+                            <p className="text-white/70 text-[15px] lg:text-[16px]">{desc}</p>
                           </div>
                         </>
                       )}
@@ -441,164 +312,106 @@ export default function AboutPage() {
                   ))}
                 </div>
               </div>
+
+              {/* Mobile Timeline — vertical left-aligned */}
+              <div className="relative md:hidden">
+                <div className="absolute left-4 top-0 w-0.5 h-full bg-[#775a19]/30" />
+                <div className="space-y-10 pl-12">
+                  {milestones.map(({ year, desc, active, pulse }) => (
+                    <div key={year} className="relative">
+                      <div
+                        className={`absolute -left-[34px] top-1 w-4 h-4 rounded-full ${active ? "bg-[#775a19]" : pulse ? "bg-[#775a19] pulse-gold" : "bg-white/20"}`}
+                        style={active ? { boxShadow: "0 0 15px rgba(119,90,25,1)" } : {}}
+                      />
+                      <h4 className="text-[18px] font-semibold text-[#775a19] mb-1">{year}</h4>
+                      <p className="text-white/70 text-[15px] leading-[1.6]">{desc}</p>
+                    </div>
+                  ))}
+                </div>
+              </div>
             </div>
           </section>
 
-          {/* ── 5. CORE VALUES ── */}
           {/* ── CORE VALUES ── */}
           <section className="bg-[#f8faf9] py-16 lg:py-24">
             <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-              {/* Heading */}
-              <div className="mx-auto mb-14 max-w-3xl text-center lg:mb-20">
+              <div className="mx-auto mb-12 sm:mb-14 max-w-3xl text-center lg:mb-20">
                 <div className="mb-5 inline-flex items-center gap-2 rounded-full border border-[#775a19]/10 bg-[#775a19]/10 px-5 py-2 text-xs font-semibold uppercase tracking-[0.2em] text-[#775a19]">
-                  <span
-                    className="material-symbols-outlined"
-                    style={{ fontSize: 18 }}
-                  >
-                    diamond
-                  </span>
+                  <span className="material-symbols-outlined" style={{ fontSize: 18 }}>diamond</span>
                   Our Principles
                 </div>
-
-                <h2
-                  className="text-4xl font-bold leading-tight tracking-tight text-[#00261a] sm:text-5xl lg:text-6xl"
-                  style={{ fontFamily: "Sora, sans-serif" }}
-                >
+                <h2 className="text-[32px] sm:text-4xl lg:text-6xl font-bold leading-tight tracking-tight text-[#00261a]" style={{ fontFamily: "Sora, sans-serif" }}>
                   Values That Drive
                   <span className="block text-[#775a19]">Harvestora</span>
                 </h2>
-
-                <p className="mt-6 text-base leading-relaxed text-[#414944] sm:text-lg">
-                  Every shipment, partnership, and decision is guided by our
-                  commitment to sustainability, trust, and excellence.
+                <p className="mt-5 sm:mt-6 text-[15px] sm:text-base lg:text-lg leading-relaxed text-[#414944]">
+                  Every shipment, partnership, and decision is guided by our commitment to sustainability, trust, and excellence.
                 </p>
               </div>
 
-              {/* Cards */}
-              <div className="grid grid-cols-1 gap-6 md:grid-cols-2 xl:grid-cols-3">
+              <div className="grid grid-cols-1 gap-5 sm:gap-6 md:grid-cols-2 xl:grid-cols-3">
                 {values.map(({ icon, title, desc }) => (
-                  <div
-                    key={title}
-                    className="group relative overflow-hidden rounded-[30px] border border-[#c0c8c3]/40 bg-white p-8 shadow-sm transition-all duration-500 hover:-translate-y-2 hover:border-[#775a19]/40 hover:shadow-2xl sm:p-10"
-                  >
-                    {/* Glow Background */}
+                  <div key={title} className="group relative overflow-hidden rounded-[24px] sm:rounded-[30px] border border-[#c0c8c3]/40 bg-white p-7 sm:p-8 lg:p-10 shadow-sm transition-all duration-500 hover:-translate-y-2 hover:border-[#775a19]/40 hover:shadow-2xl">
                     <div className="absolute right-0 top-0 h-32 w-32 translate-x-10 -translate-y-10 rounded-full bg-[#775a19]/5 blur-3xl transition-all duration-500 group-hover:bg-[#775a19]/10" />
 
-                    {/* Icon */}
-                    <div className="relative mb-8 flex h-20 w-20 items-center justify-center rounded-3xl bg-[#00261a]/5 text-[#775a19] transition-all duration-500 group-hover:scale-110 group-hover:bg-[#00261a] group-hover:text-[#ffdea5]">
-                      <span
-                        className="material-symbols-outlined"
-                        style={{
-                          fontVariationSettings: "'FILL' 1",
-                          fontSize: 40,
-                        }}
-                      >
-                        {icon}
-                      </span>
+                    <div className="relative mb-6 sm:mb-8 flex h-16 w-16 sm:h-20 sm:w-20 items-center justify-center rounded-3xl bg-[#00261a]/5 text-[#775a19] transition-all duration-500 group-hover:scale-110 group-hover:bg-[#00261a] group-hover:text-[#ffdea5]">
+                      <span className="material-symbols-outlined" style={{ fontVariationSettings: "'FILL' 1", fontSize: 36 }}>{icon}</span>
                     </div>
 
-                    {/* Title */}
-                    <h4
-                      className="relative text-3xl font-bold leading-tight text-[#00261a]"
-                      style={{ fontFamily: "Sora, sans-serif" }}
-                    >
-                      {title}
-                    </h4>
+                    <h4 className="relative text-2xl sm:text-3xl font-bold leading-tight text-[#00261a]" style={{ fontFamily: "Sora, sans-serif" }}>{title}</h4>
 
-                    {/* Divider */}
-                    <div className="mt-5 h-[2px] w-14 rounded-full bg-[#775a19]/30 transition-all duration-500 group-hover:w-24 group-hover:bg-[#775a19]" />
+                    <div className="mt-4 sm:mt-5 h-[2px] w-14 rounded-full bg-[#775a19]/30 transition-all duration-500 group-hover:w-24 group-hover:bg-[#775a19]" />
 
-                    {/* Description */}
-                    <p className="relative mt-6 text-base leading-relaxed text-[#414944]">
-                      {desc}
-                    </p>
+                    <p className="relative mt-5 sm:mt-6 text-[15px] sm:text-base leading-relaxed text-[#414944]">{desc}</p>
 
-                    {/* Hover Arrow */}
-                    <div className="mt-8 flex items-center gap-2 text-sm font-semibold uppercase tracking-[0.12em] text-[#775a19] opacity-0 transition-all duration-500 group-hover:translate-x-1 group-hover:opacity-100">
+                    <div className="mt-7 sm:mt-8 flex items-center gap-2 text-sm font-semibold uppercase tracking-[0.12em] text-[#775a19] opacity-0 transition-all duration-500 group-hover:translate-x-1 group-hover:opacity-100">
                       Learn More
-                      <span
-                        className="material-symbols-outlined"
-                        style={{ fontSize: 18 }}
-                      >
-                        arrow_forward
-                      </span>
+                      <span className="material-symbols-outlined" style={{ fontSize: 18 }}>arrow_forward</span>
                     </div>
                   </div>
                 ))}
               </div>
             </div>
           </section>
+
           {/* ── GLOBAL IMPACT STATS ── */}
-          <section className="relative overflow-hidden bg-[#eef0ef] py-20 lg:py-32">
-            {/* Background Glow */}
+          <section className="relative overflow-hidden bg-[#eef0ef] py-16 sm:py-20 lg:py-32">
             <div className="absolute inset-0">
               <div className="absolute left-0 top-0 h-72 w-72 rounded-full bg-[#775a19]/5 blur-3xl" />
-
               <div className="absolute bottom-0 right-0 h-72 w-72 rounded-full bg-[#00261a]/5 blur-3xl" />
             </div>
 
             <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-              {/* Heading */}
-              <div className="mx-auto mb-16 max-w-3xl text-center lg:mb-24">
+              <div className="mx-auto mb-12 sm:mb-16 max-w-3xl text-center lg:mb-24">
                 <div className="mb-5 inline-flex items-center gap-2 rounded-full border border-[#775a19]/10 bg-white px-5 py-2 text-xs font-semibold uppercase tracking-[0.2em] text-[#775a19] shadow-sm">
-                  <span
-                    className="material-symbols-outlined"
-                    style={{ fontSize: 18 }}
-                  >
-                    monitoring
-                  </span>
+                  <span className="material-symbols-outlined" style={{ fontSize: 18 }}>monitoring</span>
                   Global Impact
                 </div>
-
-                <h2
-                  className="text-4xl font-bold leading-tight tracking-tight text-[#00261a] sm:text-5xl lg:text-6xl"
-                  style={{ fontFamily: "Sora, sans-serif" }}
-                >
+                <h2 className="text-[30px] sm:text-4xl lg:text-6xl font-bold leading-tight tracking-tight text-[#00261a]" style={{ fontFamily: "Sora, sans-serif" }}>
                   Numbers That Reflect
-                  <span className="block text-[#775a19]">
-                    Our Global Presence
-                  </span>
+                  <span className="block text-[#775a19]">Our Global Presence</span>
                 </h2>
-
-                <p className="mt-6 text-base leading-relaxed text-[#414944] sm:text-lg">
-                  A decade of trust, international trade excellence, and
-                  sustainable agricultural partnerships worldwide.
+                <p className="mt-5 sm:mt-6 text-[15px] sm:text-base lg:text-lg leading-relaxed text-[#414944]">
+                  A decade of trust, international trade excellence, and sustainable agricultural partnerships worldwide.
                 </p>
               </div>
 
-              {/* Stats Grid */}
-              <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">
+              <div className="grid grid-cols-2 gap-4 sm:gap-6 lg:grid-cols-4">
                 {stats.map(({ value, label }) => (
-                  <div
-                    key={label}
-                    className="group relative overflow-hidden rounded-[30px] border border-white/60 bg-white/80 p-10 text-center shadow-sm backdrop-blur-md transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl"
-                  >
-                    {/* Hover Glow */}
+                  <div key={label} className="group relative overflow-hidden rounded-[24px] sm:rounded-[30px] border border-white/60 bg-white/80 p-6 sm:p-8 lg:p-10 text-center shadow-sm backdrop-blur-md transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl">
                     <div className="absolute inset-0 bg-gradient-to-br from-[#775a19]/0 via-[#775a19]/0 to-[#775a19]/5 opacity-0 transition-opacity duration-500 group-hover:opacity-100" />
 
-                    {/* Icon Circle */}
-                    <div className="mx-auto mb-6 flex h-20 w-20 items-center justify-center rounded-full bg-[#00261a]/5 text-[#775a19] transition-all duration-500 group-hover:scale-110 group-hover:bg-[#00261a] group-hover:text-[#ffdea5]">
-                      <span
-                        className="material-symbols-outlined"
-                        style={{ fontSize: 36 }}
-                      >
-                        public
-                      </span>
+                    <div className="mx-auto mb-5 sm:mb-6 flex h-14 w-14 sm:h-20 sm:w-20 items-center justify-center rounded-full bg-[#00261a]/5 text-[#775a19] transition-all duration-500 group-hover:scale-110 group-hover:bg-[#00261a] group-hover:text-[#ffdea5]">
+                      <span className="material-symbols-outlined" style={{ fontSize: 28 }}>public</span>
                     </div>
 
-                    {/* Value */}
-                    <h3
-                      className="relative text-5xl font-bold tracking-tight text-[#00261a] sm:text-6xl"
-                      style={{ fontFamily: "Sora, sans-serif" }}
-                    >
+                    <h3 className="relative text-[32px] sm:text-5xl lg:text-6xl font-bold tracking-tight text-[#00261a]" style={{ fontFamily: "Sora, sans-serif" }}>
                       {value}
                     </h3>
 
-                    {/* Divider */}
-                    <div className="mx-auto mt-5 h-[3px] w-14 rounded-full bg-[#775a19] transition-all duration-500 group-hover:w-24" />
+                    <div className="mx-auto mt-4 sm:mt-5 h-[3px] w-10 sm:w-14 rounded-full bg-[#775a19] transition-all duration-500 group-hover:w-20 sm:group-hover:w-24" />
 
-                    {/* Label */}
-                    <p className="relative mt-5 text-sm font-semibold uppercase tracking-[0.18em] text-[#414944]">
+                    <p className="relative mt-4 sm:mt-5 text-[11px] sm:text-sm font-semibold uppercase tracking-[0.15em] sm:tracking-[0.18em] text-[#414944]">
                       {label}
                     </p>
                   </div>
