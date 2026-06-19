@@ -64,128 +64,120 @@ export default function ContactPage() {
         {/* ── HERO ── */}
         {/* ── CONTACT HERO HEADER ── */}
         <header className="relative overflow-hidden bg-[#f8faf9] pt-28 pb-24">
+          {/* Background Image */}
+          <div className="absolute inset-0 z-0">
+            <img
+              src="https://lh3.googleusercontent.com/aida-public/AB6AXuBOU62kCTvR6d1KKB29g11JKvSnLYP2XpGv7L5qJ_QrgvtDRp0lOIAzJq3nsJBeUi3NuRF17UGLqz5EGIRc88u1nu6oOumx7xQMJh-8WVd45W1B4gKAbJ__PsVqWDEzbOegO57Hs8ZWsPiMViPG2vucU-vrrylT6qLnDPWgQbN_5fe_H_r6KEF4Vw5c888-_ZPHYSdSR239IxiYAXtOhJnFVFYLvd-dJUWRQJFNWK9EvhXY9rr8M85A8H9NlVFM7w7GEXuAkQgf6ftb"
+              alt="Organic commodities"
+              className="w-full h-full object-cover opacity-20"
+            />
 
-  {/* Background Image */}
-  <div className="absolute inset-0 z-0">
-    <img
-      src="https://lh3.googleusercontent.com/aida-public/AB6AXuBOU62kCTvR6d1KKB29g11JKvSnLYP2XpGv7L5qJ_QrgvtDRp0lOIAzJq3nsJBeUi3NuRF17UGLqz5EGIRc88u1nu6oOumx7xQMJh-8WVd45W1B4gKAbJ__PsVqWDEzbOegO57Hs8ZWsPiMViPG2vucU-vrrylT6qLnDPWgQbN_5fe_H_r6KEF4Vw5c888-_ZPHYSdSR239IxiYAXtOhJnFVFYLvd-dJUWRQJFNWK9EvhXY9rr8M85A8H9NlVFM7w7GEXuAkQgf6ftb"
-      alt="Organic commodities"
-      className="w-full h-full object-cover opacity-20"
-    />
-
-    {/* Overlay */}
-    <div className="absolute inset-0 bg-gradient-to-b from-[#f8faf9]/70 via-[#f8faf9]/90 to-[#f8faf9]" />
-  </div>
-
-  {/* Premium Noise Texture */}
-  <div className="absolute inset-0 opacity-[0.03] mix-blend-overlay pointer-events-none bg-[url('/noise.png')]" />
-
-  {/* Decorative Glows */}
-  <div className="absolute top-0 left-0 w-96 h-96 bg-[#775a19]/10 rounded-full blur-3xl -translate-x-1/2 -translate-y-1/2" />
-
-  <div className="absolute bottom-0 right-0 w-[30rem] h-[30rem] bg-[#00261a]/5 rounded-full blur-3xl translate-x-1/3 translate-y-1/3" />
-
-  {/* Floating Glow Orbs */}
-  <div className="absolute top-40 right-20 w-32 h-32 bg-[#ffdea5]/20 blur-3xl rounded-full animate-pulse" />
-
-  <div className="absolute bottom-20 left-10 w-40 h-40 bg-[#775a19]/10 blur-3xl rounded-full animate-pulse" />
-
-  {/* Global Network Dots */}
-  <div className="absolute inset-0 z-0 overflow-hidden">
-    <div className="absolute top-[22%] left-[18%] w-3 h-3 bg-[#775a19] rounded-full animate-ping" />
-    <div className="absolute top-[35%] right-[22%] w-2 h-2 bg-[#00261a] rounded-full animate-ping delay-300" />
-    <div className="absolute bottom-[28%] left-[35%] w-2.5 h-2.5 bg-[#775a19] rounded-full animate-ping delay-700" />
-    <div className="absolute bottom-[18%] right-[30%] w-3 h-3 bg-[#ffdea5] rounded-full animate-ping delay-1000" />
-  </div>
-
-  {/* Content */}
-  <div className="relative z-10 max-w-[1280px] mx-auto px-6 md:px-10 lg:px-16">
-    <div className="max-w-4xl mx-auto text-center">
-
-      {/* Badge */}
-      <div className="inline-flex items-center gap-2 bg-[#ffdea5]/40 backdrop-blur-md border border-[#ffdea5]/30 text-[#775a19] px-5 py-2 rounded-full text-xs font-bold tracking-[0.15em] uppercase mb-8 shadow-lg">
-        <span className="material-symbols-outlined text-[18px]">
-          public
-        </span>
-        Global Trade Network
-      </div>
-
-      {/* Heading */}
-      <h1
-        className="text-[44px] md:text-[64px] lg:text-[78px] leading-[0.98] tracking-[-0.05em] font-bold text-[#00261a] mb-8"
-        style={{ fontFamily: "Sora, sans-serif" }}
-      >
-        Connect with Our
-        <br />
-
-        <span className="bg-gradient-to-r from-[#775a19] to-[#ffdea5] bg-clip-text text-transparent">
-          Global Export Desk
-        </span>
-      </h1>
-
-      {/* Description */}
-      <p className="text-[18px] md:text-[20px] leading-[1.9] text-[#414944] max-w-3xl mx-auto mb-14">
-        Bridging the gap between organic agriculture and industrial
-        precision. Reach our dedicated trade specialists for enterprise
-        export solutions, global sourcing partnerships, and
-        compliance-driven commodity supply.
-      </p>
-
-      {/* CTA Buttons */}
-      <div className="flex flex-col sm:flex-row items-center justify-center gap-5">
-
-        {/* Primary CTA */}
-        <button className="group inline-flex items-center gap-3 px-8 py-4 rounded-2xl bg-[#00261a] text-white font-bold tracking-[0.05em] hover:bg-[#0f3d2e] hover:-translate-y-1 hover:shadow-2xl transition-all duration-300 shadow-xl">
-          Contact Trade Desk
-
-          <span className="material-symbols-outlined group-hover:translate-x-1 transition-transform duration-300">
-            arrow_forward
-          </span>
-        </button>
-
-        {/* Secondary CTA */}
-        <button className="group inline-flex items-center gap-3 px-8 py-4 rounded-2xl border border-[#d9deda] bg-white/80 backdrop-blur text-[#00261a] font-bold tracking-[0.05em] hover:border-[#775a19] hover:-translate-y-1 hover:shadow-xl transition-all duration-300">
-          Download Company Profile
-
-          <span className="material-symbols-outlined group-hover:translate-y-1 transition-transform duration-300">
-            south
-          </span>
-        </button>
-      </div>
-
-      {/* Stats */}
-      <div className="grid grid-cols-2 md:grid-cols-4 gap-5 mt-20">
-
-        {[
-          { value: "40+", label: "Export Nations" },
-          { value: "1,200+", label: "Enterprise Clients" },
-          { value: "ISO", label: "Certified Systems" },
-          { value: "24/7", label: "Trade Support" },
-        ].map(({ value, label }) => (
-          <div
-            key={label}
-            className="group relative overflow-hidden bg-white/70 backdrop-blur-xl border border-[#d9deda] rounded-3xl p-6 hover:-translate-y-2 hover:shadow-2xl hover:border-[#775a19] transition-all duration-500"
-          >
-
-            {/* Card Glow */}
-            <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 bg-gradient-to-br from-[#ffdea5]/10 to-transparent" />
-
-            <p className="relative z-10 text-[34px] md:text-[40px] font-bold text-[#775a19] mb-2">
-              {value}
-            </p>
-
-            <p className="relative z-10 text-xs uppercase tracking-[0.18em] text-[#717974]">
-              {label}
-            </p>
+            {/* Overlay */}
+            <div className="absolute inset-0 bg-gradient-to-b from-[#f8faf9]/70 via-[#f8faf9]/90 to-[#f8faf9]" />
           </div>
-        ))}
-      </div>
-    </div>
-  </div>
-</header>
 
-<main className="mx-auto px-4 sm:px-6 md:px-10 lg:px-16 py-16 md:py-24">
-            <div className="grid grid-cols-1 xl:grid-cols-12 gap-10 xl:gap-14">
+          {/* Premium Noise Texture */}
+          <div className="absolute inset-0 opacity-[0.03] mix-blend-overlay pointer-events-none bg-[url('/noise.png')]" />
+
+          {/* Decorative Glows */}
+          <div className="absolute top-0 left-0 w-96 h-96 bg-[#775a19]/10 rounded-full blur-3xl -translate-x-1/2 -translate-y-1/2" />
+
+          <div className="absolute bottom-0 right-0 w-[30rem] h-[30rem] bg-[#00261a]/5 rounded-full blur-3xl translate-x-1/3 translate-y-1/3" />
+
+          {/* Floating Glow Orbs */}
+          <div className="absolute top-40 right-20 w-32 h-32 bg-[#ffdea5]/20 blur-3xl rounded-full animate-pulse" />
+
+          <div className="absolute bottom-20 left-10 w-40 h-40 bg-[#775a19]/10 blur-3xl rounded-full animate-pulse" />
+
+          {/* Global Network Dots */}
+          <div className="absolute inset-0 z-0 overflow-hidden">
+            <div className="absolute top-[22%] left-[18%] w-3 h-3 bg-[#775a19] rounded-full animate-ping" />
+            <div className="absolute top-[35%] right-[22%] w-2 h-2 bg-[#00261a] rounded-full animate-ping delay-300" />
+            <div className="absolute bottom-[28%] left-[35%] w-2.5 h-2.5 bg-[#775a19] rounded-full animate-ping delay-700" />
+            <div className="absolute bottom-[18%] right-[30%] w-3 h-3 bg-[#ffdea5] rounded-full animate-ping delay-1000" />
+          </div>
+
+          {/* Content */}
+          <div className="relative z-10 mx-auto md:px-10 lg:px-16">
+            <div className="max-w-4xl mx-auto text-center">
+              {/* Badge */}
+              <div className="inline-flex items-center gap-2 bg-[#ffdea5]/40 backdrop-blur-md border border-[#ffdea5]/30 text-[#775a19] px-5 py-2 rounded-full text-xs font-bold tracking-[0.15em] uppercase mb-8 shadow-lg">
+                <span className="material-symbols-outlined text-[18px]">
+                  public
+                </span>
+                Global Trade Network
+              </div>
+
+              {/* Heading */}
+              <h1
+                className="text-[44px] md:text-[64px] lg:text-[78px] leading-[0.98] tracking-[-0.05em] font-bold text-[#00261a] mb-8"
+                style={{ fontFamily: "Sora, sans-serif" }}
+              >
+                Connect with Our
+                <br />
+                <span className="bg-gradient-to-r from-[#775a19] to-[#ffdea5] bg-clip-text text-transparent">
+                  Global Export Desk
+                </span>
+              </h1>
+
+              {/* Description */}
+              <p className="text-[18px] md:text-[20px] leading-[1.9] text-[#414944] max-w-3xl mx-auto mb-14">
+                Bridging the gap between organic agriculture and industrial
+                precision. Reach our dedicated trade specialists for enterprise
+                export solutions, global sourcing partnerships, and
+                compliance-driven commodity supply.
+              </p>
+
+              {/* CTA Buttons */}
+              <div className="flex flex-col sm:flex-row items-center justify-center gap-5">
+                {/* Primary CTA */}
+                <button className="group inline-flex items-center gap-3 px-8 py-4 rounded-2xl bg-[#00261a] text-white font-bold tracking-[0.05em] hover:bg-[#0f3d2e] hover:-translate-y-1 hover:shadow-2xl transition-all duration-300 shadow-xl">
+                  Contact Trade Desk
+                  <span className="material-symbols-outlined group-hover:translate-x-1 transition-transform duration-300">
+                    arrow_forward
+                  </span>
+                </button>
+
+                {/* Secondary CTA */}
+                <button className="group inline-flex items-center gap-3 px-8 py-4 rounded-2xl border border-[#d9deda] bg-white/80 backdrop-blur text-[#00261a] font-bold tracking-[0.05em] hover:border-[#775a19] hover:-translate-y-1 hover:shadow-xl transition-all duration-300">
+                  Download Company Profile
+                  <span className="material-symbols-outlined group-hover:translate-y-1 transition-transform duration-300">
+                    south
+                  </span>
+                </button>
+              </div>
+
+              {/* Stats */}
+              <div className="grid grid-cols-2 md:grid-cols-4 gap-5 mt-20">
+                {[
+                  { value: "40+", label: "Export Nations" },
+                  { value: "1,200+", label: "Enterprise Clients" },
+                  { value: "ISO", label: "Certified Systems" },
+                  { value: "24/7", label: "Trade Support" },
+                ].map(({ value, label }) => (
+                  <div
+                    key={label}
+                    className="group relative overflow-hidden bg-white/70 backdrop-blur-xl border border-[#d9deda] rounded-3xl p-6 hover:-translate-y-2 hover:shadow-2xl hover:border-[#775a19] transition-all duration-500"
+                  >
+                    {/* Card Glow */}
+                    <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 bg-gradient-to-br from-[#ffdea5]/10 to-transparent" />
+
+                    <p className="relative z-10 text-[34px] md:text-[40px] font-bold text-[#775a19] mb-2">
+                      {value}
+                    </p>
+
+                    <p className="relative z-10 text-xs uppercase tracking-[0.18em] text-[#717974]">
+                      {label}
+                    </p>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+        </header>
+
+        <main className="mx-auto px-4 sm:px-6 md:px-10 lg:px-16 py-16 md:py-24">
+          <div className="grid grid-cols-1 xl:grid-cols-12 gap-10 xl:gap-14">
             {/* ───────────────── CONTACT FORM ───────────────── */}
             <div className="xl:col-span-7">
               <div className="relative overflow-hidden rounded-3xl border border-[#d9deda] bg-white shadow-[0_20px_80px_rgba(0,0,0,0.06)]">
