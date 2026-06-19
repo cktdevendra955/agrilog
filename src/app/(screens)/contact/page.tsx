@@ -184,8 +184,8 @@ export default function ContactPage() {
   </div>
 </header>
 
-        <main className="mx-auto px-16 py-24">
-          <div className="grid grid-cols-1 xl:grid-cols-12 gap-10 xl:gap-14">
+<main className="mx-auto px-4 sm:px-6 md:px-10 lg:px-16 py-16 md:py-24">
+            <div className="grid grid-cols-1 xl:grid-cols-12 gap-10 xl:gap-14">
             {/* ───────────────── CONTACT FORM ───────────────── */}
             <div className="xl:col-span-7">
               <div className="relative overflow-hidden rounded-3xl border border-[#d9deda] bg-white shadow-[0_20px_80px_rgba(0,0,0,0.06)]">
@@ -342,7 +342,7 @@ export default function ContactPage() {
             </div>
 
             {/* ── SIDEBAR: CHANNELS + OFFICES ── */}
-            <div className="lg:col-span-5 space-y-12">
+            <div className="xl:col-span-5 space-y-12">
               {/* Direct Channels */}
               <div className="space-y-4">
                 <h3 className="text-[14px] font-semibold tracking-widest text-[#775a19] uppercase">
@@ -582,7 +582,7 @@ export default function ContactPage() {
 
         {/* ── TRUST WALL ── */}
         <section className="bg-[#f3f4f3] py-20 border-y border-[#c0c8c3]/10">
-          <div className=" mx-auto px-16">
+          <div className="mx-auto px-4 sm:px-6 md:px-10 lg:px-16">
             <p className="text-[14px] font-semibold tracking-[0.2em] text-[#414944] text-center mb-16 uppercase">
               Global Export Certifications &amp; Standards
             </p>
